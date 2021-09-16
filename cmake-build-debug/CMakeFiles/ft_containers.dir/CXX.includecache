@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/levensta/ft_containers/iterator.hpp
+
+/Users/levensta/ft_containers/main.cpp
+iostream
+-
+iterator.hpp
+/Users/levensta/ft_containers/iterator.hpp
+forward_list
+-
+
