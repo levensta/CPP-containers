@@ -7,12 +7,20 @@
 #IncludeRegexTransform: 
 
 /Users/levensta/ft_containers/iterator.hpp
+iostream
+-
 
 /Users/levensta/ft_containers/main.cpp
 iostream
 -
-iterator.hpp
-/Users/levensta/ft_containers/iterator.hpp
 forward_list
 -
+vector
+-
+vector_iterator.hpp
+/Users/levensta/ft_containers/vector_iterator.hpp
+
+/Users/levensta/ft_containers/vector_iterator.hpp
+iterator.hpp
+/Users/levensta/ft_containers/iterator.hpp
 
