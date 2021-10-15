@@ -2,8 +2,7 @@
 // Created by Lorent Evenstar on 9/16/21.
 //
 
-#ifndef FT_CONTAINERS_ITERATOR_HPP
-#define FT_CONTAINERS_ITERATOR_HPP
+#pragma once
 
 #include <iostream>
 
@@ -252,5 +251,3 @@ namespace ft
 	}
 
 }
-
-#endif //FT_CONTAINERS_ITERATOR_HPP

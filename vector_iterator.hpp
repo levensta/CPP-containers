@@ -2,8 +2,7 @@
 // Created by Lorent Evenstar on 9/15/21.
 //
 
-#ifndef FT_CONTAINERS_VECTOR_ITERATOR_HPP
-#define FT_CONTAINERS_VECTOR_ITERATOR_HPP
+#pragma once
 
 #include "iterator.hpp"
 
@@ -141,6 +140,3 @@ namespace ft
 		return lhs.base() >= rhs.base();
 	}
 }
-
-
-#endif //FT_CONTAINERS_VECTOR_ITERATOR_HPP
