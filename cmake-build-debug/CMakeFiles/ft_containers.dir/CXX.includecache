@@ -6,11 +6,33 @@
 
 #IncludeRegexTransform: 
 
+/Users/levensta/ft_containers/iterator.hpp
+iostream
+-
+
 /Users/levensta/ft_containers/main.cpp
 iostream
 -
 vector
 -
+vector.hpp
+/Users/levensta/ft_containers/vector.hpp
 memory
 -
+
+/Users/levensta/ft_containers/utils.hpp
+iostream
+-
+
+/Users/levensta/ft_containers/vector.hpp
+vector_iterator.hpp
+/Users/levensta/ft_containers/vector_iterator.hpp
+utils.hpp
+/Users/levensta/ft_containers/utils.hpp
+memory
+-
+
+/Users/levensta/ft_containers/vector_iterator.hpp
+iterator.hpp
+/Users/levensta/ft_containers/iterator.hpp
 

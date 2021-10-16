@@ -11,7 +11,7 @@ namespace ft
 	template<class T>
 	class vector_iterator {
 	private:
-		typedef iterator_traits<T> type_traits;
+		typedef iterator_traits<T*> type_traits;
 
 	public:
 		typedef typename type_traits::value_type value_type;

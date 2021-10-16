@@ -78,6 +78,12 @@ namespace ft
 		return ft::distance(first, last, typename InputIterator::iterator_category());
 	}
 
+	template<class T>
+	typename iterator_traits<T*>::difference_type distance(T *first, T *last)
+	{
+		return last - first;
+	}
+
 	/*
 	 *	FUNCTION ADVANCE()
 	 */
