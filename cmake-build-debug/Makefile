@@ -153,6 +153,270 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+unit-tests/print_test.o: unit-tests/print_test.cpp.o
+.PHONY : unit-tests/print_test.o
+
+# target to build an object file
+unit-tests/print_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o
+.PHONY : unit-tests/print_test.cpp.o
+
+unit-tests/print_test.i: unit-tests/print_test.cpp.i
+.PHONY : unit-tests/print_test.i
+
+# target to preprocess a source file
+unit-tests/print_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.i
+.PHONY : unit-tests/print_test.cpp.i
+
+unit-tests/print_test.s: unit-tests/print_test.cpp.s
+.PHONY : unit-tests/print_test.s
+
+# target to generate assembly for a file
+unit-tests/print_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.s
+.PHONY : unit-tests/print_test.cpp.s
+
+unit-tests/vector/access.o: unit-tests/vector/access.cpp.o
+.PHONY : unit-tests/vector/access.o
+
+# target to build an object file
+unit-tests/vector/access.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/access.cpp.o
+.PHONY : unit-tests/vector/access.cpp.o
+
+unit-tests/vector/access.i: unit-tests/vector/access.cpp.i
+.PHONY : unit-tests/vector/access.i
+
+# target to preprocess a source file
+unit-tests/vector/access.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/access.cpp.i
+.PHONY : unit-tests/vector/access.cpp.i
+
+unit-tests/vector/access.s: unit-tests/vector/access.cpp.s
+.PHONY : unit-tests/vector/access.s
+
+# target to generate assembly for a file
+unit-tests/vector/access.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/access.cpp.s
+.PHONY : unit-tests/vector/access.cpp.s
+
+unit-tests/vector/capacity.o: unit-tests/vector/capacity.cpp.o
+.PHONY : unit-tests/vector/capacity.o
+
+# target to build an object file
+unit-tests/vector/capacity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/capacity.cpp.o
+.PHONY : unit-tests/vector/capacity.cpp.o
+
+unit-tests/vector/capacity.i: unit-tests/vector/capacity.cpp.i
+.PHONY : unit-tests/vector/capacity.i
+
+# target to preprocess a source file
+unit-tests/vector/capacity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/capacity.cpp.i
+.PHONY : unit-tests/vector/capacity.cpp.i
+
+unit-tests/vector/capacity.s: unit-tests/vector/capacity.cpp.s
+.PHONY : unit-tests/vector/capacity.s
+
+# target to generate assembly for a file
+unit-tests/vector/capacity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/capacity.cpp.s
+.PHONY : unit-tests/vector/capacity.cpp.s
+
+unit-tests/vector/const_iterator.o: unit-tests/vector/const_iterator.cpp.o
+.PHONY : unit-tests/vector/const_iterator.o
+
+# target to build an object file
+unit-tests/vector/const_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_iterator.cpp.o
+.PHONY : unit-tests/vector/const_iterator.cpp.o
+
+unit-tests/vector/const_iterator.i: unit-tests/vector/const_iterator.cpp.i
+.PHONY : unit-tests/vector/const_iterator.i
+
+# target to preprocess a source file
+unit-tests/vector/const_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_iterator.cpp.i
+.PHONY : unit-tests/vector/const_iterator.cpp.i
+
+unit-tests/vector/const_iterator.s: unit-tests/vector/const_iterator.cpp.s
+.PHONY : unit-tests/vector/const_iterator.s
+
+# target to generate assembly for a file
+unit-tests/vector/const_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_iterator.cpp.s
+.PHONY : unit-tests/vector/const_iterator.cpp.s
+
+unit-tests/vector/const_reverse_iterator.o: unit-tests/vector/const_reverse_iterator.cpp.o
+.PHONY : unit-tests/vector/const_reverse_iterator.o
+
+# target to build an object file
+unit-tests/vector/const_reverse_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_reverse_iterator.cpp.o
+.PHONY : unit-tests/vector/const_reverse_iterator.cpp.o
+
+unit-tests/vector/const_reverse_iterator.i: unit-tests/vector/const_reverse_iterator.cpp.i
+.PHONY : unit-tests/vector/const_reverse_iterator.i
+
+# target to preprocess a source file
+unit-tests/vector/const_reverse_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_reverse_iterator.cpp.i
+.PHONY : unit-tests/vector/const_reverse_iterator.cpp.i
+
+unit-tests/vector/const_reverse_iterator.s: unit-tests/vector/const_reverse_iterator.cpp.s
+.PHONY : unit-tests/vector/const_reverse_iterator.s
+
+# target to generate assembly for a file
+unit-tests/vector/const_reverse_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/const_reverse_iterator.cpp.s
+.PHONY : unit-tests/vector/const_reverse_iterator.cpp.s
+
+unit-tests/vector/constructors.o: unit-tests/vector/constructors.cpp.o
+.PHONY : unit-tests/vector/constructors.o
+
+# target to build an object file
+unit-tests/vector/constructors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/constructors.cpp.o
+.PHONY : unit-tests/vector/constructors.cpp.o
+
+unit-tests/vector/constructors.i: unit-tests/vector/constructors.cpp.i
+.PHONY : unit-tests/vector/constructors.i
+
+# target to preprocess a source file
+unit-tests/vector/constructors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/constructors.cpp.i
+.PHONY : unit-tests/vector/constructors.cpp.i
+
+unit-tests/vector/constructors.s: unit-tests/vector/constructors.cpp.s
+.PHONY : unit-tests/vector/constructors.s
+
+# target to generate assembly for a file
+unit-tests/vector/constructors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/constructors.cpp.s
+.PHONY : unit-tests/vector/constructors.cpp.s
+
+unit-tests/vector/iterator.o: unit-tests/vector/iterator.cpp.o
+.PHONY : unit-tests/vector/iterator.o
+
+# target to build an object file
+unit-tests/vector/iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/iterator.cpp.o
+.PHONY : unit-tests/vector/iterator.cpp.o
+
+unit-tests/vector/iterator.i: unit-tests/vector/iterator.cpp.i
+.PHONY : unit-tests/vector/iterator.i
+
+# target to preprocess a source file
+unit-tests/vector/iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/iterator.cpp.i
+.PHONY : unit-tests/vector/iterator.cpp.i
+
+unit-tests/vector/iterator.s: unit-tests/vector/iterator.cpp.s
+.PHONY : unit-tests/vector/iterator.s
+
+# target to generate assembly for a file
+unit-tests/vector/iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/iterator.cpp.s
+.PHONY : unit-tests/vector/iterator.cpp.s
+
+unit-tests/vector/modifiers.o: unit-tests/vector/modifiers.cpp.o
+.PHONY : unit-tests/vector/modifiers.o
+
+# target to build an object file
+unit-tests/vector/modifiers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/modifiers.cpp.o
+.PHONY : unit-tests/vector/modifiers.cpp.o
+
+unit-tests/vector/modifiers.i: unit-tests/vector/modifiers.cpp.i
+.PHONY : unit-tests/vector/modifiers.i
+
+# target to preprocess a source file
+unit-tests/vector/modifiers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/modifiers.cpp.i
+.PHONY : unit-tests/vector/modifiers.cpp.i
+
+unit-tests/vector/modifiers.s: unit-tests/vector/modifiers.cpp.s
+.PHONY : unit-tests/vector/modifiers.s
+
+# target to generate assembly for a file
+unit-tests/vector/modifiers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/modifiers.cpp.s
+.PHONY : unit-tests/vector/modifiers.cpp.s
+
+unit-tests/vector/operators.o: unit-tests/vector/operators.cpp.o
+.PHONY : unit-tests/vector/operators.o
+
+# target to build an object file
+unit-tests/vector/operators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/operators.cpp.o
+.PHONY : unit-tests/vector/operators.cpp.o
+
+unit-tests/vector/operators.i: unit-tests/vector/operators.cpp.i
+.PHONY : unit-tests/vector/operators.i
+
+# target to preprocess a source file
+unit-tests/vector/operators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/operators.cpp.i
+.PHONY : unit-tests/vector/operators.cpp.i
+
+unit-tests/vector/operators.s: unit-tests/vector/operators.cpp.s
+.PHONY : unit-tests/vector/operators.s
+
+# target to generate assembly for a file
+unit-tests/vector/operators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/operators.cpp.s
+.PHONY : unit-tests/vector/operators.cpp.s
+
+unit-tests/vector/reverse_iterator.o: unit-tests/vector/reverse_iterator.cpp.o
+.PHONY : unit-tests/vector/reverse_iterator.o
+
+# target to build an object file
+unit-tests/vector/reverse_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/reverse_iterator.cpp.o
+.PHONY : unit-tests/vector/reverse_iterator.cpp.o
+
+unit-tests/vector/reverse_iterator.i: unit-tests/vector/reverse_iterator.cpp.i
+.PHONY : unit-tests/vector/reverse_iterator.i
+
+# target to preprocess a source file
+unit-tests/vector/reverse_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/reverse_iterator.cpp.i
+.PHONY : unit-tests/vector/reverse_iterator.cpp.i
+
+unit-tests/vector/reverse_iterator.s: unit-tests/vector/reverse_iterator.cpp.s
+.PHONY : unit-tests/vector/reverse_iterator.s
+
+# target to generate assembly for a file
+unit-tests/vector/reverse_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/reverse_iterator.cpp.s
+.PHONY : unit-tests/vector/reverse_iterator.cpp.s
+
+unit-tests/vector/test_vector.o: unit-tests/vector/test_vector.cpp.o
+.PHONY : unit-tests/vector/test_vector.o
+
+# target to build an object file
+unit-tests/vector/test_vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/test_vector.cpp.o
+.PHONY : unit-tests/vector/test_vector.cpp.o
+
+unit-tests/vector/test_vector.i: unit-tests/vector/test_vector.cpp.i
+.PHONY : unit-tests/vector/test_vector.i
+
+# target to preprocess a source file
+unit-tests/vector/test_vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/test_vector.cpp.i
+.PHONY : unit-tests/vector/test_vector.cpp.i
+
+unit-tests/vector/test_vector.s: unit-tests/vector/test_vector.cpp.s
+.PHONY : unit-tests/vector/test_vector.s
+
+# target to generate assembly for a file
+unit-tests/vector/test_vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/vector/test_vector.cpp.s
+.PHONY : unit-tests/vector/test_vector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +429,39 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... unit-tests/print_test.o"
+	@echo "... unit-tests/print_test.i"
+	@echo "... unit-tests/print_test.s"
+	@echo "... unit-tests/vector/access.o"
+	@echo "... unit-tests/vector/access.i"
+	@echo "... unit-tests/vector/access.s"
+	@echo "... unit-tests/vector/capacity.o"
+	@echo "... unit-tests/vector/capacity.i"
+	@echo "... unit-tests/vector/capacity.s"
+	@echo "... unit-tests/vector/const_iterator.o"
+	@echo "... unit-tests/vector/const_iterator.i"
+	@echo "... unit-tests/vector/const_iterator.s"
+	@echo "... unit-tests/vector/const_reverse_iterator.o"
+	@echo "... unit-tests/vector/const_reverse_iterator.i"
+	@echo "... unit-tests/vector/const_reverse_iterator.s"
+	@echo "... unit-tests/vector/constructors.o"
+	@echo "... unit-tests/vector/constructors.i"
+	@echo "... unit-tests/vector/constructors.s"
+	@echo "... unit-tests/vector/iterator.o"
+	@echo "... unit-tests/vector/iterator.i"
+	@echo "... unit-tests/vector/iterator.s"
+	@echo "... unit-tests/vector/modifiers.o"
+	@echo "... unit-tests/vector/modifiers.i"
+	@echo "... unit-tests/vector/modifiers.s"
+	@echo "... unit-tests/vector/operators.o"
+	@echo "... unit-tests/vector/operators.i"
+	@echo "... unit-tests/vector/operators.s"
+	@echo "... unit-tests/vector/reverse_iterator.o"
+	@echo "... unit-tests/vector/reverse_iterator.i"
+	@echo "... unit-tests/vector/reverse_iterator.s"
+	@echo "... unit-tests/vector/test_vector.o"
+	@echo "... unit-tests/vector/test_vector.i"
+	@echo "... unit-tests/vector/test_vector.s"
 .PHONY : help
 
 

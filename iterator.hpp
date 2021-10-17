@@ -194,11 +194,11 @@ namespace ft
 		}
 
 		reverse_iterator operator+(difference_type n) const {
-			return reverse_iterator(ptrElement + n);
+			return reverse_iterator(ptrElement - n);
 		}
 
 		reverse_iterator operator-(difference_type n) const {
-			return reverse_iterator(ptrElement - n);
+			return reverse_iterator(ptrElement + n);
 		}
 
 		reverse_iterator &operator+=(difference_type n) {

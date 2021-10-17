@@ -1,16 +1,37 @@
+#include "headers.hpp"
+#include <functional>
+#include <ios>
 #include <iostream>
-//#include "iterator.hpp"
-//#include <forward_list>
+#include <iterator>
+#include <list>
+#include <map>
+#include <ostream>
+#include <string>
+#include <type_traits>
+#include <utility>
 #include <vector>
-//#include "vector_iterator.hpp"
+// #include "map.hpp"
 #include "vector.hpp"
-#include <memory>
+// #include "red_black_tree.hpp"
+// #include "new_iterator.hpp"
+// #include <stack>
+// #include "stack.hpp"
 
-int main() {
-	int i[] = {1, 2, 3, 4, 5};
-	ft::vector<int>	vec(1.2f, 2);
-	std::string s;
-//	int v = int();
-	std::cout << std::boolalpha << ft::is_integral<typeof(sizeof(s))>::value << std::endl;
+int		main(int narg, char **args) {
+	mkdir("./unit-tests", 0777);
+	if (narg < 2) {
+		test_vector();
+		// test_map();
+		// test_stack();
+	}
+	else {
+		// if (std::string(args[1]) == "map")
+		// 	test_map();
+		if (std::string(args[1]) == "vector")
+			test_vector();
+		// if (std::string(args[1]) == "stack")
+		// 	test_stack();
+	}
+	while (true) {}
 	return 0;
 }

@@ -34,6 +34,29 @@ namespace ft
 	 *	ENABLE_IF
 	 */
 
+	template <class T>
+	class is_pointer : public std::false_type {};
+
+	template <class T>
+			class is_pointer<T *> : public std::true_type {};
+
+	template <class T>
+			class is_pointer<const T *> : public std::true_type {};
+
+	template<class Iterator>
+	class is_iterator {
+	public:
+		typedef char yes;
+		typedef int no;
+
+		template<class Any>
+			static yes &test(typename Any::iterator_category * = 0) {};
+		template<class Any>
+			static no &test(...) {};
+		static bool const value = sizeof(test<Iterator>(0)) == sizeof(yes) || is_pointer<Iterator>::value;
+
+	};
+
 	template<bool Cond, class T = void>
 	struct enable_if {};
 

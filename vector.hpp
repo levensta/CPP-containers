@@ -48,7 +48,7 @@ namespace ft
 		// range
 		template <class InputIterator>
 		vector (InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type(), \
-		typename ft::enable_if<is_integral<typeof(sizeof(*first))>::value, bool>::type t = true)			// sorry, it's my batshit
+		typename ft::enable_if<is_iterator<InputIterator>::value, char>::type * = NULL)			// sorry, it's my batshit
 			: _size(0), _capacity(0), _array(NULL), _allocator(alloc) {
 			this->assign(first, last);
 		}
@@ -69,14 +69,16 @@ namespace ft
 		}
 
 		// assignation operator
-		vector& operator= (const vector& x) {
+		vector& operator=(const vector& x) {
 			if (this != &x) {
 				if (_capacity != 0) {
 					this->~vector();
 				}
 				_allocator = x._allocator;
+				this->reserve(x.capacity());
 				this->assign(x.begin(), x.end());
 			}
+			return *this;
 		}
 
 		/*
@@ -151,13 +153,16 @@ namespace ft
 				throw std::length_error("allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size");
 			}
 			if (n > _capacity) {
+				if (n < _capacity * 2)
+					n = _capacity * 2;
 				pointer tmp = _array;
 				_array = _allocator.allocate(n);
 				for (size_type i = 0; i < _size; ++i) {
 					_allocator.construct(_array + i, tmp[i]);
 					_allocator.destroy(tmp + i);
 				}
-				_allocator.deallocate(tmp, _capacity);
+				if (_capacity > 0)
+					_allocator.deallocate(tmp, _capacity);
 				_capacity = n;
 			}
 		}
@@ -210,7 +215,7 @@ namespace ft
 
 		template <class InputIterator>
 		void assign (InputIterator first, InputIterator last, \
-		typename ft::enable_if<is_integral<typeof(sizeof(*first))>::value, bool>::type t = true) {
+		typename ft::enable_if<is_iterator<InputIterator>::value, char>::type * = NULL) {
 			size_type dist = ft::distance(first, last);
 			this->reserve(dist);
 			for (size_type i = 0; i < _size || i < dist; ++i, ++first) {
@@ -221,6 +226,7 @@ namespace ft
 					_allocator.construct(_array + i, *first);
 				}
 			}
+			_size = dist;
 		}
 
 		void assign (size_type n, const value_type& val) {
@@ -233,11 +239,12 @@ namespace ft
 					_allocator.construct(_array + i, val);
 				}
 			}
+			_size = n;
 		}
 
 		// fill
 		void insert (iterator position, size_type n, const value_type& val) {
-			size_type index = position - this->begin() - 1;
+			size_type index = position - this->begin();
 			this->reserve(_size + n);
 
 			for (size_type i = _size + n - 1; n != 0 && i >= index; --i) {
@@ -257,13 +264,15 @@ namespace ft
 						_array[i] = _array[i - n];
 					}
 				}
+				if (i == 0)
+					break;
 			}
 			_size += n;
 		}
 
 		// single element
 		iterator insert (iterator position, const value_type& val) {
-			size_type index = position - this->begin() - 1;
+			size_type index = position - this->begin();
 			this->insert(position, 1, val);
 			return this->begin() + index;
 		}
@@ -271,15 +280,15 @@ namespace ft
 		// range
 		template <class InputIterator>
 		void insert (iterator position, InputIterator first, InputIterator last, \
-		typename ft::enable_if<is_integral<typeof(sizeof(*first))>::value, bool>::type t = true) {
-			size_type index = position - this->begin() - 1;
+		typename ft::enable_if<is_iterator<InputIterator>::value, char>::type * = NULL) {
+			size_type index = position - this->begin();
 			size_type dist = ft::distance(first, last);
 			this->reserve(_size + dist);
 
 			for (size_type i = _size + dist - 1; dist != 0 && i >= index; --i) {
 				if (i >= _size) {
 					if (i < index + dist) {
-						_allocator.construct(_array + i, *first++);
+						_allocator.construct(_array + i, *(--last));
 					}
 					else {
 						_allocator.construct(_array + i, _array[i - dist]);
@@ -287,7 +296,7 @@ namespace ft
 				}
 				else {
 					if (i < index + dist) {
-						_array[i] = *first++;
+						_array[i] = *(--last);
 					}
 					else {
 						_array[i] = _array[i - dist];
@@ -297,13 +306,9 @@ namespace ft
 			_size += dist;
 		}
 
-		iterator erase (iterator position) {
-			return (this->erase(position, position + 1));
-		}
-
 		iterator erase (iterator first, iterator last) {
 			size_type dist = ft::distance(first, last);
-			size_type index = first - this->begin() - 1;
+			size_type index = first - this->begin();
 			for (size_type i = index; i < _size; ++i) {
 				if (i < _size - dist) {
 					_array[i] = _array[i + dist];
@@ -314,6 +319,10 @@ namespace ft
 			}
 			_size -= dist;
 			return this->begin() + index;
+		}
+
+		iterator erase (iterator position) {
+			return (this->erase(position, position + 1));
 		}
 
 		void clear() {
@@ -346,7 +355,21 @@ namespace ft
  	*/
 
 	template <class T, class Alloc>
-	bool operator==(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
+	bool operator==(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) {
+		typename vector<T,Alloc>::const_iterator lhs_begin = lhs.begin();
+		typename vector<T,Alloc>::const_iterator rhs_begin = rhs.begin();
+		typename vector<T,Alloc>::const_iterator lhs_end = lhs.end();
+		typename vector<T,Alloc>::const_iterator rhs_end = rhs.end();
+
+		while (lhs_begin != lhs_end) {
+			if (rhs_begin == rhs_end || *rhs_begin != *lhs_begin) {
+				return false;
+			}
+			++lhs_begin;
+			++rhs_begin;
+		}
+		return true;
+	}
 
 	template <class T, class Alloc>
 	bool operator!=(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) {
@@ -354,7 +377,25 @@ namespace ft
 	}
 
 	template <class T, class Alloc>
-	bool operator<(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs);
+	bool operator<(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) {
+		typename vector<T,Alloc>::const_iterator lhs_begin = lhs.begin();
+		typename vector<T,Alloc>::const_iterator rhs_begin = rhs.begin();
+		typename vector<T,Alloc>::const_iterator lhs_end = lhs.end();
+		typename vector<T,Alloc>::const_iterator rhs_end = rhs.end();
+
+		while (lhs_begin != lhs_end)
+		{
+			if (rhs_begin == rhs_end || *rhs_begin < *lhs_begin) {
+				return false;
+			}
+			else if (*lhs_begin < *rhs_begin){
+				return true;
+			}
+			++lhs_begin;
+			++rhs_begin;
+		}
+		return (rhs_begin != rhs_end);
+	}
 
 	template <class T, class Alloc>
 	bool operator<=(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) {
