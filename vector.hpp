@@ -356,6 +356,9 @@ namespace ft
 
 	template <class T, class Alloc>
 	bool operator==(const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) {
+		if (lhs.size() != rhs.size()) {
+			return false;
+		}
 		typename vector<T,Alloc>::const_iterator lhs_begin = lhs.begin();
 		typename vector<T,Alloc>::const_iterator rhs_begin = rhs.begin();
 		typename vector<T,Alloc>::const_iterator lhs_end = lhs.end();

@@ -14,24 +14,23 @@
 #include "vector.hpp"
 // #include "red_black_tree.hpp"
 // #include "new_iterator.hpp"
-// #include <stack>
-// #include "stack.hpp"
+ #include <stack>
+ #include "stack.hpp"
 
 int		main(int narg, char **args) {
 	mkdir("./unit-tests", 0777);
 	if (narg < 2) {
 		test_vector();
-		// test_map();
-		// test_stack();
+//		 test_map();
+		 test_stack();
 	}
 	else {
 		// if (std::string(args[1]) == "map")
 		// 	test_map();
 		if (std::string(args[1]) == "vector")
 			test_vector();
-		// if (std::string(args[1]) == "stack")
-		// 	test_stack();
+		 if (std::string(args[1]) == "stack")
+		 	test_stack();
 	}
-	while (true) {}
 	return 0;
 }

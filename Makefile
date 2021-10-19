@@ -18,7 +18,10 @@ SRC =	main.cpp \
         unit-tests/vector/modifiers.cpp \
         unit-tests/vector/operators.cpp \
         unit-tests/vector/reverse_iterator.cpp \
-        unit-tests/vector/test_vector.cpp
+        unit-tests/vector/test_vector.cpp \
+		unit-tests/stack/methods.cpp \
+		unit-tests/stack/operators.cpp \
+		unit-tests/stack/test_stack.cpp
         # unit-tests/map/access.cpp \
         # unit-tests/map/capacity.cpp \
         # unit-tests/map/const_iterator.cpp \
@@ -30,9 +33,6 @@ SRC =	main.cpp \
         # unit-tests/map/operations.cpp \
         # unit-tests/map/reverse_iterator.cpp \
         # unit-tests/map/test_map.cpp \
-		# unit-tests/stack/methods.cpp \
-        # unit-tests/stack/operators.cpp \
-        # unit-tests/stack/test_stack.cpp
 
 
 OBJ =	$(SRC:.cpp=.o)

@@ -177,6 +177,78 @@ unit-tests/print_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.s
 .PHONY : unit-tests/print_test.cpp.s
 
+unit-tests/stack/methods.o: unit-tests/stack/methods.cpp.o
+.PHONY : unit-tests/stack/methods.o
+
+# target to build an object file
+unit-tests/stack/methods.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o
+.PHONY : unit-tests/stack/methods.cpp.o
+
+unit-tests/stack/methods.i: unit-tests/stack/methods.cpp.i
+.PHONY : unit-tests/stack/methods.i
+
+# target to preprocess a source file
+unit-tests/stack/methods.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.i
+.PHONY : unit-tests/stack/methods.cpp.i
+
+unit-tests/stack/methods.s: unit-tests/stack/methods.cpp.s
+.PHONY : unit-tests/stack/methods.s
+
+# target to generate assembly for a file
+unit-tests/stack/methods.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.s
+.PHONY : unit-tests/stack/methods.cpp.s
+
+unit-tests/stack/operators.o: unit-tests/stack/operators.cpp.o
+.PHONY : unit-tests/stack/operators.o
+
+# target to build an object file
+unit-tests/stack/operators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o
+.PHONY : unit-tests/stack/operators.cpp.o
+
+unit-tests/stack/operators.i: unit-tests/stack/operators.cpp.i
+.PHONY : unit-tests/stack/operators.i
+
+# target to preprocess a source file
+unit-tests/stack/operators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.i
+.PHONY : unit-tests/stack/operators.cpp.i
+
+unit-tests/stack/operators.s: unit-tests/stack/operators.cpp.s
+.PHONY : unit-tests/stack/operators.s
+
+# target to generate assembly for a file
+unit-tests/stack/operators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.s
+.PHONY : unit-tests/stack/operators.cpp.s
+
+unit-tests/stack/test_stack.o: unit-tests/stack/test_stack.cpp.o
+.PHONY : unit-tests/stack/test_stack.o
+
+# target to build an object file
+unit-tests/stack/test_stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o
+.PHONY : unit-tests/stack/test_stack.cpp.o
+
+unit-tests/stack/test_stack.i: unit-tests/stack/test_stack.cpp.i
+.PHONY : unit-tests/stack/test_stack.i
+
+# target to preprocess a source file
+unit-tests/stack/test_stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.i
+.PHONY : unit-tests/stack/test_stack.cpp.i
+
+unit-tests/stack/test_stack.s: unit-tests/stack/test_stack.cpp.s
+.PHONY : unit-tests/stack/test_stack.s
+
+# target to generate assembly for a file
+unit-tests/stack/test_stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.s
+.PHONY : unit-tests/stack/test_stack.cpp.s
+
 unit-tests/vector/access.o: unit-tests/vector/access.cpp.o
 .PHONY : unit-tests/vector/access.o
 
@@ -432,6 +504,15 @@ help:
 	@echo "... unit-tests/print_test.o"
 	@echo "... unit-tests/print_test.i"
 	@echo "... unit-tests/print_test.s"
+	@echo "... unit-tests/stack/methods.o"
+	@echo "... unit-tests/stack/methods.i"
+	@echo "... unit-tests/stack/methods.s"
+	@echo "... unit-tests/stack/operators.o"
+	@echo "... unit-tests/stack/operators.i"
+	@echo "... unit-tests/stack/operators.s"
+	@echo "... unit-tests/stack/test_stack.o"
+	@echo "... unit-tests/stack/test_stack.i"
+	@echo "... unit-tests/stack/test_stack.s"
 	@echo "... unit-tests/vector/access.o"
 	@echo "... unit-tests/vector/access.i"
 	@echo "... unit-tests/vector/access.s"

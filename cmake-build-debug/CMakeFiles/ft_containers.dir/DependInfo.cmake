@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/levensta/ft_containers/main.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/main.cpp.o"
   "/Users/levensta/ft_containers/unit-tests/print_test.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o"
+  "/Users/levensta/ft_containers/unit-tests/stack/methods.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o"
+  "/Users/levensta/ft_containers/unit-tests/stack/operators.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o"
+  "/Users/levensta/ft_containers/unit-tests/stack/test_stack.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o"
   "/Users/levensta/ft_containers/unit-tests/vector/access.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/vector/access.cpp.o"
   "/Users/levensta/ft_containers/unit-tests/vector/capacity.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/vector/capacity.cpp.o"
   "/Users/levensta/ft_containers/unit-tests/vector/const_iterator.cpp" "/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles/ft_containers.dir/unit-tests/vector/const_iterator.cpp.o"

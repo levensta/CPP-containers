@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ft_containers.dir/main.cpp.o"
   "CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o"
+  "CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o"
+  "CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o"
+  "CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o"
   "CMakeFiles/ft_containers.dir/unit-tests/vector/access.cpp.o"
   "CMakeFiles/ft_containers.dir/unit-tests/vector/capacity.cpp.o"
   "CMakeFiles/ft_containers.dir/unit-tests/vector/const_iterator.cpp.o"

@@ -1,6 +1,5 @@
 #include "color.hpp"
 #include "../../headers.hpp"
-#include "../../new_iterator.hpp"
 #include "../../stack.hpp"
 #include <fstream>
 #include <iostream>

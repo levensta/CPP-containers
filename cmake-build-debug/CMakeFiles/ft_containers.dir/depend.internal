@@ -5,6 +5,7 @@ CMakeFiles/ft_containers.dir/main.cpp.o
  /Users/levensta/ft_containers/headers.hpp
  /Users/levensta/ft_containers/iterator.hpp
  /Users/levensta/ft_containers/main.cpp
+ /Users/levensta/ft_containers/stack.hpp
  /Users/levensta/ft_containers/utils.hpp
  /Users/levensta/ft_containers/vector.hpp
  /Users/levensta/ft_containers/vector_iterator.hpp
@@ -14,6 +15,36 @@ CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o
  /Users/levensta/ft_containers/unit-tests/headers/color.hpp
  /Users/levensta/ft_containers/unit-tests/headers/test_vector.hpp
  /Users/levensta/ft_containers/unit-tests/print_test.cpp
+ /Users/levensta/ft_containers/utils.hpp
+ /Users/levensta/ft_containers/vector.hpp
+ /Users/levensta/ft_containers/vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o
+ /Users/levensta/ft_containers/headers.hpp
+ /Users/levensta/ft_containers/iterator.hpp
+ /Users/levensta/ft_containers/stack.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/color.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/test_stack.hpp
+ /Users/levensta/ft_containers/unit-tests/stack/methods.cpp
+ /Users/levensta/ft_containers/utils.hpp
+ /Users/levensta/ft_containers/vector.hpp
+ /Users/levensta/ft_containers/vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o
+ /Users/levensta/ft_containers/headers.hpp
+ /Users/levensta/ft_containers/iterator.hpp
+ /Users/levensta/ft_containers/stack.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/color.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/test_stack.hpp
+ /Users/levensta/ft_containers/unit-tests/stack/operators.cpp
+ /Users/levensta/ft_containers/utils.hpp
+ /Users/levensta/ft_containers/vector.hpp
+ /Users/levensta/ft_containers/vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o
+ /Users/levensta/ft_containers/headers.hpp
+ /Users/levensta/ft_containers/iterator.hpp
+ /Users/levensta/ft_containers/stack.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/color.hpp
+ /Users/levensta/ft_containers/unit-tests/headers/test_stack.hpp
+ /Users/levensta/ft_containers/unit-tests/stack/test_stack.cpp
  /Users/levensta/ft_containers/utils.hpp
  /Users/levensta/ft_containers/vector.hpp
  /Users/levensta/ft_containers/vector_iterator.hpp

@@ -16,4 +16,8 @@ add_executable(ft_containers main.cpp vector_iterator.hpp iterator.hpp vector.hp
         unit-tests/vector/operators.cpp
         unit-tests/vector/reverse_iterator.cpp
         unit-tests/vector/test_vector.cpp
-        unit-tests/print_test.cpp)
+        unit-tests/print_test.cpp
+        stack.hpp
+        unit-tests/stack/methods.cpp
+        unit-tests/stack/operators.cpp
+        unit-tests/stack/test_stack.cpp)

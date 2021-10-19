@@ -5,6 +5,7 @@ CMakeFiles/ft_containers.dir/main.cpp.o: \
  ../headers.hpp \
  ../iterator.hpp \
  ../main.cpp \
+ ../stack.hpp \
  ../utils.hpp \
  ../vector.hpp \
  ../vector_iterator.hpp
@@ -14,6 +15,36 @@ CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o: \
  ../unit-tests/headers/color.hpp \
  ../unit-tests/headers/test_vector.hpp \
  ../unit-tests/print_test.cpp \
+ ../utils.hpp \
+ ../vector.hpp \
+ ../vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../stack.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_stack.hpp \
+ ../unit-tests/stack/methods.cpp \
+ ../utils.hpp \
+ ../vector.hpp \
+ ../vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../stack.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_stack.hpp \
+ ../unit-tests/stack/operators.cpp \
+ ../utils.hpp \
+ ../vector.hpp \
+ ../vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../stack.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_stack.hpp \
+ ../unit-tests/stack/test_stack.cpp \
  ../utils.hpp \
  ../vector.hpp \
  ../vector_iterator.hpp
