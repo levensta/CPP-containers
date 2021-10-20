@@ -89,6 +89,12 @@
 		<Unit filename="/Users/levensta/ft_containers/main.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/nodes.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/red_black_tree.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/stack.hpp">
 			<Option target="ft_containers"/>
 		</Unit>

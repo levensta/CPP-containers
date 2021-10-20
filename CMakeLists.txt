@@ -20,4 +20,4 @@ add_executable(ft_containers main.cpp vector_iterator.hpp iterator.hpp vector.hp
         stack.hpp
         unit-tests/stack/methods.cpp
         unit-tests/stack/operators.cpp
-        unit-tests/stack/test_stack.cpp)
+        unit-tests/stack/test_stack.cpp nodes.hpp red_black_tree.hpp)
