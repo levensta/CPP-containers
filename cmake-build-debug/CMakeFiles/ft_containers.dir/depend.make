@@ -5,6 +5,8 @@ CMakeFiles/ft_containers.dir/main.cpp.o: \
  ../headers.hpp \
  ../iterator.hpp \
  ../main.cpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
  ../stack.hpp \
  ../utils.hpp \
  ../vector.hpp \
