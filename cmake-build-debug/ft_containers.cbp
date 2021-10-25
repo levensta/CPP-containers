@@ -89,6 +89,9 @@
 		<Unit filename="/Users/levensta/ft_containers/main.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/map.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/nodes.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
@@ -98,10 +101,46 @@
 		<Unit filename="/Users/levensta/ft_containers/stack.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/tree_iterator.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/unit-tests/headers/color.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/unit-tests/headers/test_vector.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/access.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/capacity.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/const_iterator.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/const_reverse_iterator.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/constructors.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/iterator.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/modifiers.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/observers.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/operations.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/reverse_iterator.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/unit-tests/map/test_map.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/unit-tests/print_test.cpp">

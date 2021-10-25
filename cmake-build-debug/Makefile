@@ -153,6 +153,270 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+unit-tests/map/access.o: unit-tests/map/access.cpp.o
+.PHONY : unit-tests/map/access.o
+
+# target to build an object file
+unit-tests/map/access.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o
+.PHONY : unit-tests/map/access.cpp.o
+
+unit-tests/map/access.i: unit-tests/map/access.cpp.i
+.PHONY : unit-tests/map/access.i
+
+# target to preprocess a source file
+unit-tests/map/access.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.i
+.PHONY : unit-tests/map/access.cpp.i
+
+unit-tests/map/access.s: unit-tests/map/access.cpp.s
+.PHONY : unit-tests/map/access.s
+
+# target to generate assembly for a file
+unit-tests/map/access.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.s
+.PHONY : unit-tests/map/access.cpp.s
+
+unit-tests/map/capacity.o: unit-tests/map/capacity.cpp.o
+.PHONY : unit-tests/map/capacity.o
+
+# target to build an object file
+unit-tests/map/capacity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o
+.PHONY : unit-tests/map/capacity.cpp.o
+
+unit-tests/map/capacity.i: unit-tests/map/capacity.cpp.i
+.PHONY : unit-tests/map/capacity.i
+
+# target to preprocess a source file
+unit-tests/map/capacity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.i
+.PHONY : unit-tests/map/capacity.cpp.i
+
+unit-tests/map/capacity.s: unit-tests/map/capacity.cpp.s
+.PHONY : unit-tests/map/capacity.s
+
+# target to generate assembly for a file
+unit-tests/map/capacity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.s
+.PHONY : unit-tests/map/capacity.cpp.s
+
+unit-tests/map/const_iterator.o: unit-tests/map/const_iterator.cpp.o
+.PHONY : unit-tests/map/const_iterator.o
+
+# target to build an object file
+unit-tests/map/const_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o
+.PHONY : unit-tests/map/const_iterator.cpp.o
+
+unit-tests/map/const_iterator.i: unit-tests/map/const_iterator.cpp.i
+.PHONY : unit-tests/map/const_iterator.i
+
+# target to preprocess a source file
+unit-tests/map/const_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.i
+.PHONY : unit-tests/map/const_iterator.cpp.i
+
+unit-tests/map/const_iterator.s: unit-tests/map/const_iterator.cpp.s
+.PHONY : unit-tests/map/const_iterator.s
+
+# target to generate assembly for a file
+unit-tests/map/const_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.s
+.PHONY : unit-tests/map/const_iterator.cpp.s
+
+unit-tests/map/const_reverse_iterator.o: unit-tests/map/const_reverse_iterator.cpp.o
+.PHONY : unit-tests/map/const_reverse_iterator.o
+
+# target to build an object file
+unit-tests/map/const_reverse_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o
+.PHONY : unit-tests/map/const_reverse_iterator.cpp.o
+
+unit-tests/map/const_reverse_iterator.i: unit-tests/map/const_reverse_iterator.cpp.i
+.PHONY : unit-tests/map/const_reverse_iterator.i
+
+# target to preprocess a source file
+unit-tests/map/const_reverse_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.i
+.PHONY : unit-tests/map/const_reverse_iterator.cpp.i
+
+unit-tests/map/const_reverse_iterator.s: unit-tests/map/const_reverse_iterator.cpp.s
+.PHONY : unit-tests/map/const_reverse_iterator.s
+
+# target to generate assembly for a file
+unit-tests/map/const_reverse_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.s
+.PHONY : unit-tests/map/const_reverse_iterator.cpp.s
+
+unit-tests/map/constructors.o: unit-tests/map/constructors.cpp.o
+.PHONY : unit-tests/map/constructors.o
+
+# target to build an object file
+unit-tests/map/constructors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o
+.PHONY : unit-tests/map/constructors.cpp.o
+
+unit-tests/map/constructors.i: unit-tests/map/constructors.cpp.i
+.PHONY : unit-tests/map/constructors.i
+
+# target to preprocess a source file
+unit-tests/map/constructors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.i
+.PHONY : unit-tests/map/constructors.cpp.i
+
+unit-tests/map/constructors.s: unit-tests/map/constructors.cpp.s
+.PHONY : unit-tests/map/constructors.s
+
+# target to generate assembly for a file
+unit-tests/map/constructors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.s
+.PHONY : unit-tests/map/constructors.cpp.s
+
+unit-tests/map/iterator.o: unit-tests/map/iterator.cpp.o
+.PHONY : unit-tests/map/iterator.o
+
+# target to build an object file
+unit-tests/map/iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o
+.PHONY : unit-tests/map/iterator.cpp.o
+
+unit-tests/map/iterator.i: unit-tests/map/iterator.cpp.i
+.PHONY : unit-tests/map/iterator.i
+
+# target to preprocess a source file
+unit-tests/map/iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.i
+.PHONY : unit-tests/map/iterator.cpp.i
+
+unit-tests/map/iterator.s: unit-tests/map/iterator.cpp.s
+.PHONY : unit-tests/map/iterator.s
+
+# target to generate assembly for a file
+unit-tests/map/iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.s
+.PHONY : unit-tests/map/iterator.cpp.s
+
+unit-tests/map/modifiers.o: unit-tests/map/modifiers.cpp.o
+.PHONY : unit-tests/map/modifiers.o
+
+# target to build an object file
+unit-tests/map/modifiers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o
+.PHONY : unit-tests/map/modifiers.cpp.o
+
+unit-tests/map/modifiers.i: unit-tests/map/modifiers.cpp.i
+.PHONY : unit-tests/map/modifiers.i
+
+# target to preprocess a source file
+unit-tests/map/modifiers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.i
+.PHONY : unit-tests/map/modifiers.cpp.i
+
+unit-tests/map/modifiers.s: unit-tests/map/modifiers.cpp.s
+.PHONY : unit-tests/map/modifiers.s
+
+# target to generate assembly for a file
+unit-tests/map/modifiers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.s
+.PHONY : unit-tests/map/modifiers.cpp.s
+
+unit-tests/map/observers.o: unit-tests/map/observers.cpp.o
+.PHONY : unit-tests/map/observers.o
+
+# target to build an object file
+unit-tests/map/observers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o
+.PHONY : unit-tests/map/observers.cpp.o
+
+unit-tests/map/observers.i: unit-tests/map/observers.cpp.i
+.PHONY : unit-tests/map/observers.i
+
+# target to preprocess a source file
+unit-tests/map/observers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.i
+.PHONY : unit-tests/map/observers.cpp.i
+
+unit-tests/map/observers.s: unit-tests/map/observers.cpp.s
+.PHONY : unit-tests/map/observers.s
+
+# target to generate assembly for a file
+unit-tests/map/observers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.s
+.PHONY : unit-tests/map/observers.cpp.s
+
+unit-tests/map/operations.o: unit-tests/map/operations.cpp.o
+.PHONY : unit-tests/map/operations.o
+
+# target to build an object file
+unit-tests/map/operations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o
+.PHONY : unit-tests/map/operations.cpp.o
+
+unit-tests/map/operations.i: unit-tests/map/operations.cpp.i
+.PHONY : unit-tests/map/operations.i
+
+# target to preprocess a source file
+unit-tests/map/operations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.i
+.PHONY : unit-tests/map/operations.cpp.i
+
+unit-tests/map/operations.s: unit-tests/map/operations.cpp.s
+.PHONY : unit-tests/map/operations.s
+
+# target to generate assembly for a file
+unit-tests/map/operations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.s
+.PHONY : unit-tests/map/operations.cpp.s
+
+unit-tests/map/reverse_iterator.o: unit-tests/map/reverse_iterator.cpp.o
+.PHONY : unit-tests/map/reverse_iterator.o
+
+# target to build an object file
+unit-tests/map/reverse_iterator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o
+.PHONY : unit-tests/map/reverse_iterator.cpp.o
+
+unit-tests/map/reverse_iterator.i: unit-tests/map/reverse_iterator.cpp.i
+.PHONY : unit-tests/map/reverse_iterator.i
+
+# target to preprocess a source file
+unit-tests/map/reverse_iterator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.i
+.PHONY : unit-tests/map/reverse_iterator.cpp.i
+
+unit-tests/map/reverse_iterator.s: unit-tests/map/reverse_iterator.cpp.s
+.PHONY : unit-tests/map/reverse_iterator.s
+
+# target to generate assembly for a file
+unit-tests/map/reverse_iterator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.s
+.PHONY : unit-tests/map/reverse_iterator.cpp.s
+
+unit-tests/map/test_map.o: unit-tests/map/test_map.cpp.o
+.PHONY : unit-tests/map/test_map.o
+
+# target to build an object file
+unit-tests/map/test_map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o
+.PHONY : unit-tests/map/test_map.cpp.o
+
+unit-tests/map/test_map.i: unit-tests/map/test_map.cpp.i
+.PHONY : unit-tests/map/test_map.i
+
+# target to preprocess a source file
+unit-tests/map/test_map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.i
+.PHONY : unit-tests/map/test_map.cpp.i
+
+unit-tests/map/test_map.s: unit-tests/map/test_map.cpp.s
+.PHONY : unit-tests/map/test_map.s
+
+# target to generate assembly for a file
+unit-tests/map/test_map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.s
+.PHONY : unit-tests/map/test_map.cpp.s
+
 unit-tests/print_test.o: unit-tests/print_test.cpp.o
 .PHONY : unit-tests/print_test.o
 
@@ -501,6 +765,39 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... unit-tests/map/access.o"
+	@echo "... unit-tests/map/access.i"
+	@echo "... unit-tests/map/access.s"
+	@echo "... unit-tests/map/capacity.o"
+	@echo "... unit-tests/map/capacity.i"
+	@echo "... unit-tests/map/capacity.s"
+	@echo "... unit-tests/map/const_iterator.o"
+	@echo "... unit-tests/map/const_iterator.i"
+	@echo "... unit-tests/map/const_iterator.s"
+	@echo "... unit-tests/map/const_reverse_iterator.o"
+	@echo "... unit-tests/map/const_reverse_iterator.i"
+	@echo "... unit-tests/map/const_reverse_iterator.s"
+	@echo "... unit-tests/map/constructors.o"
+	@echo "... unit-tests/map/constructors.i"
+	@echo "... unit-tests/map/constructors.s"
+	@echo "... unit-tests/map/iterator.o"
+	@echo "... unit-tests/map/iterator.i"
+	@echo "... unit-tests/map/iterator.s"
+	@echo "... unit-tests/map/modifiers.o"
+	@echo "... unit-tests/map/modifiers.i"
+	@echo "... unit-tests/map/modifiers.s"
+	@echo "... unit-tests/map/observers.o"
+	@echo "... unit-tests/map/observers.i"
+	@echo "... unit-tests/map/observers.s"
+	@echo "... unit-tests/map/operations.o"
+	@echo "... unit-tests/map/operations.i"
+	@echo "... unit-tests/map/operations.s"
+	@echo "... unit-tests/map/reverse_iterator.o"
+	@echo "... unit-tests/map/reverse_iterator.i"
+	@echo "... unit-tests/map/reverse_iterator.s"
+	@echo "... unit-tests/map/test_map.o"
+	@echo "... unit-tests/map/test_map.i"
+	@echo "... unit-tests/map/test_map.s"
 	@echo "... unit-tests/print_test.o"
 	@echo "... unit-tests/print_test.i"
 	@echo "... unit-tests/print_test.s"

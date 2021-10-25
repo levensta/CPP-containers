@@ -101,7 +101,7 @@ namespace ft
 	};
 
 	template<class T>
-			vector_iterator<T> operator+(typename vector_iterator<T>::difference_type n, const vector_iterator<T> &vec) {
+	vector_iterator<T> operator+(typename vector_iterator<T>::difference_type n, const vector_iterator<T> &vec) {
 		return vector_iterator<T>(vec.base() + n);
 	}
 

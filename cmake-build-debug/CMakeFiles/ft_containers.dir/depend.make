@@ -5,12 +5,135 @@ CMakeFiles/ft_containers.dir/main.cpp.o: \
  ../headers.hpp \
  ../iterator.hpp \
  ../main.cpp \
+ ../map.hpp \
  ../nodes.hpp \
  ../red_black_tree.hpp \
  ../stack.hpp \
+ ../tree_iterator.hpp \
  ../utils.hpp \
  ../vector.hpp \
  ../vector_iterator.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/access.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/capacity.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/const_iterator.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/const_reverse_iterator.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/constructors.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/iterator.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/modifiers.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/observers.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/operations.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/reverse_iterator.cpp \
+ ../utils.hpp
+CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o: \
+ ../headers.hpp \
+ ../iterator.hpp \
+ ../map.hpp \
+ ../nodes.hpp \
+ ../red_black_tree.hpp \
+ ../tree_iterator.hpp \
+ ../unit-tests/headers/color.hpp \
+ ../unit-tests/headers/test_map.hpp \
+ ../unit-tests/map/test_map.cpp \
+ ../utils.hpp
 CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o: \
  ../headers.hpp \
  ../iterator.hpp \

@@ -21,18 +21,18 @@ SRC =	main.cpp \
         unit-tests/vector/test_vector.cpp \
 		unit-tests/stack/methods.cpp \
 		unit-tests/stack/operators.cpp \
-		unit-tests/stack/test_stack.cpp
-        # unit-tests/map/access.cpp \
-        # unit-tests/map/capacity.cpp \
-        # unit-tests/map/const_iterator.cpp \
-        # unit-tests/map/const_reverse_iterator.cpp \
-        # unit-tests/map/constructors.cpp \
-        # unit-tests/map/iterator.cpp \
-        # unit-tests/map/modifiers.cpp \
-        # unit-tests/map/observers.cpp \
-        # unit-tests/map/operations.cpp \
-        # unit-tests/map/reverse_iterator.cpp \
-        # unit-tests/map/test_map.cpp \
+		unit-tests/stack/test_stack.cpp \
+		unit-tests/map/access.cpp \
+		unit-tests/map/capacity.cpp \
+		unit-tests/map/const_iterator.cpp \
+		unit-tests/map/const_reverse_iterator.cpp \
+		unit-tests/map/constructors.cpp \
+		unit-tests/map/iterator.cpp \
+		unit-tests/map/modifiers.cpp \
+		unit-tests/map/observers.cpp \
+		unit-tests/map/operations.cpp \
+		unit-tests/map/reverse_iterator.cpp \
+		unit-tests/map/test_map.cpp
 
 
 OBJ =	$(SRC:.cpp=.o)

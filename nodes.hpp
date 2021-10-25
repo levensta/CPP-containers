@@ -76,6 +76,16 @@ namespace ft
 	}
 
 	/*
+	 *	LESS
+	 */
+	template <class T>
+	struct less : std::binary_function <T, T, bool> {
+		bool operator() (const T& x, const T& y) const {
+			return x < y;
+		}
+	};
+
+	/*
 	 *	MAP NODE
 	 */
 	template <class T>
@@ -88,168 +98,172 @@ namespace ft
 		typedef T type;
 		typedef typename T::first_type key;
 		typedef typename T::second_type value;
-		type		*p;
+		type		p;
 		map_node	*parent;
 		map_node	*left;
 		map_node	*right;
 		map_node	*end;
 		bool		isRed;
 
-		map_node(type *pr, map_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
+		map_node(type pr, map_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
 		virtual ~map_node() {}
 		key &get_key() {
-			return p->first;
+			return p.first;
+		}
+
+		type &operator*() {
+			return p;
 		}
 	};
 
 	template <class T>
 	bool operator==(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first == rhs.p->first;
+		return lhs.p.first == rhs.p.first;
 	}
 
 	template <class T>
 	bool operator==(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first == rhs.first;
+		return lhs.p.first == rhs.first;
 	}
 
 	template <class T>
 	bool operator==(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first == rhs.p->first;
+		return lhs.first == rhs.p.first;
 	}
 
 	template <class T>
 	bool operator==(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs == rhs.p->first;
+		return lhs == rhs.p.first;
 	}
 
 	template <class T>
 	bool operator==(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first == rhs;
+		return lhs.p.first == rhs;
 	}
 
 	template <class T>
 	bool operator!=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first != rhs.p->first;
+		return lhs.p.first != rhs.p.first;
 	}
 
 	template <class T>
 	bool operator!=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first != rhs.first;
+		return lhs.p.first != rhs.first;
 	}
 
 	template <class T>
 	bool operator!=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first != rhs.p->first;
+		return lhs.first != rhs.p.first;
 	}
 
 	template <class T>
 	bool operator!=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs != rhs.p->first;
+		return lhs != rhs.p.first;
 	}
 
 	template <class T>
 	bool operator!=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first != rhs;
+		return lhs.p.first != rhs;
 	}
 
 	template <class T>
 	bool operator>=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first >= rhs.p->first;
+		return lhs.p.first >= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first >= rhs.first;
+		return lhs.p.first >= rhs.first;
 	}
 
 	template <class T>
 	bool operator>=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first >= rhs.p->first;
+		return lhs.first >= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs >= rhs.p->first;
+		return lhs >= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first >= rhs;
+		return lhs.p.first >= rhs;
 	}
 
 	template <class T>
 	bool operator<=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first <= rhs.p->first;
+		return lhs.p.first <= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first <= rhs.first;
+		return lhs.p.first <= rhs.first;
 	}
 
 	template <class T>
 	bool operator<=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first <= rhs.p->first;
+		return lhs.first <= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs <= rhs.p->first;
+		return lhs <= rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first <= rhs;
+		return lhs.p.first <= rhs;
 	}
 
 	template <class T>
 	bool operator>(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first > rhs.p->first;
+		return lhs.p.first > rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first > rhs.first;
+		return lhs.p.first > rhs.first;
 	}
 
 	template <class T>
 	bool operator>(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first > rhs.p->first;
+		return lhs.first > rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs > rhs.p->first;
+		return lhs > rhs.p.first;
 	}
 
 	template <class T>
 	bool operator>(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first > rhs;
+		return lhs.p.first > rhs;
 	}
 
 	template <class T>
 	bool operator<(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p->first < rhs.p->first;
+		return lhs.p.first < rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p->first < rhs.first;
+		return lhs.p.first < rhs.first;
 	}
 
 	template <class T>
 	bool operator<(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first < rhs.p->first;
+		return lhs.first < rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs < rhs.p->first;
+		return lhs < rhs.p.first;
 	}
 
 	template <class T>
 	bool operator<(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p->first < rhs;
+		return lhs.p.first < rhs;
 	}
 
 	/*
@@ -259,7 +273,7 @@ namespace ft
 	class end_map_node : public map_node<T> {
 
 	public:
-		end_map_node() : map_node<T>(NULL, NULL) {}
+		end_map_node() : map_node<T>(T(), NULL) {}
 		virtual ~end_map_node() {}
 	};
 
@@ -275,108 +289,112 @@ namespace ft
 	public:
 		typedef T type;
 		typedef T key;
-		type		*p;
+		type		p;
 		set_node	*parent;
 		set_node	*left;
 		set_node	*right;
 		set_node	*end;
 		bool		isRed;
 
-		set_node(type *pr) : p(pr), parent(NULL), left(NULL), right(NULL), isRed(true) {}
+		set_node(type pr) : p(pr), parent(NULL), left(NULL), right(NULL), isRed(true) {}
 		virtual ~set_node() {}
 		key &get_key() {
-			return *p;
+			return p;
+		}
+
+		type &operator*() {
+			return p;
 		}
 	};
 
 	template <class T>
 	bool operator==(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) == *(rhs.p);
+		return lhs.p == rhs.p;
 	}
 
 	template <class T>
 	bool operator==(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) == rhs;
+		return lhs.p == rhs;
 	}
 
 	template <class T>
 	bool operator==(const T& lhs, const set_node<T>& rhs) {
-		return lhs == *(rhs.p);
+		return lhs == rhs.p;
 	}
 
 	template <class T>
 	bool operator!=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) != *(rhs.p);
+		return lhs.p != rhs.p;
 	}
 
 	template <class T>
 	bool operator!=(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) != rhs;
+		return lhs.p != rhs;
 	}
 
 	template <class T>
 	bool operator!=(const T& lhs, const set_node<T>& rhs) {
-		return lhs != *(rhs.p);
+		return lhs != rhs.p;
 	}
 
 	template <class T>
 	bool operator>=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) >= *(rhs.p);
+		return lhs.p >= rhs.p;
 	}
 
 	template <class T>
 	bool operator>=(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) >= rhs;
+		return lhs.p >= rhs;
 	}
 
 	template <class T>
 	bool operator>=(const T& lhs, const set_node<T>& rhs) {
-		return lhs >= *(rhs.p);
+		return lhs >= rhs.p;
 	}
 
 	template <class T>
 	bool operator<=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) <= *(rhs.p);
+		return lhs.p <= rhs.p;
 	}
 
 	template <class T>
 	bool operator<=(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) <= rhs;
+		return lhs.p <= rhs;
 	}
 
 	template <class T>
 	bool operator<=(const T& lhs, const set_node<T>& rhs) {
-		return lhs <= *(rhs.p);
+		return lhs <= rhs.p;
 	}
 
 	template <class T>
 	bool operator>(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) > *(rhs.p);
+		return lhs.p > rhs.p;
 	}
 
 	template <class T>
 	bool operator>(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) > rhs;
+		return lhs.p > rhs;
 	}
 
 	template <class T>
 	bool operator>(const T& lhs, const set_node<T>& rhs) {
-		return lhs > *(rhs.p);
+		return lhs > rhs.p;
 	}
 
 	template <class T>
 	bool operator<(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return *(lhs.p) < *(rhs.p);
+		return lhs.p < rhs.p;
 	}
 
 	template <class T>
 	bool operator<(const set_node<T>& lhs, const T& rhs) {
-		return *(lhs.p) < rhs;
+		return lhs.p < rhs;
 	}
 
 	template <class T>
 	bool operator<(const T& lhs, const set_node<T>& rhs) {
-		return lhs < *(rhs.p);
+		return lhs < rhs.p;
 	}
 
 	/*

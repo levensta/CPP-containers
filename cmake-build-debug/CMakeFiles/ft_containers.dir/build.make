@@ -261,6 +261,149 @@ CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/stack/test_stack.cpp -o CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.s
 
+CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o: ../unit-tests/map/access.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/access.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/access.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/access.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o: ../unit-tests/map/capacity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/capacity.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/capacity.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/capacity.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o: ../unit-tests/map/const_iterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/const_iterator.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/const_iterator.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/const_iterator.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o: ../unit-tests/map/const_reverse_iterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/const_reverse_iterator.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/const_reverse_iterator.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/const_reverse_iterator.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o: ../unit-tests/map/constructors.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/constructors.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/constructors.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/constructors.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o: ../unit-tests/map/iterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/iterator.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/iterator.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/iterator.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o: ../unit-tests/map/modifiers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/modifiers.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/modifiers.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/modifiers.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o: ../unit-tests/map/observers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/observers.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/observers.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/observers.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o: ../unit-tests/map/operations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/operations.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/operations.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/operations.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o: ../unit-tests/map/reverse_iterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/reverse_iterator.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/reverse_iterator.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/reverse_iterator.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.s
+
+CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o: ../unit-tests/map/test_map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o -c /Users/levensta/ft_containers/unit-tests/map/test_map.cpp
+
+CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/levensta/ft_containers/unit-tests/map/test_map.cpp > CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.i
+
+CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/levensta/ft_containers/unit-tests/map/test_map.cpp -o CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.s
+
 # Object files for target ft_containers
 ft_containers_OBJECTS = \
 "CMakeFiles/ft_containers.dir/main.cpp.o" \
@@ -277,7 +420,18 @@ ft_containers_OBJECTS = \
 "CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o" \
 "CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o" \
 "CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o" \
-"CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o"
+"CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o" \
+"CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o"
 
 # External object files for target ft_containers
 ft_containers_EXTERNAL_OBJECTS =
@@ -297,9 +451,20 @@ ft_containers: CMakeFiles/ft_containers.dir/unit-tests/print_test.cpp.o
 ft_containers: CMakeFiles/ft_containers.dir/unit-tests/stack/methods.cpp.o
 ft_containers: CMakeFiles/ft_containers.dir/unit-tests/stack/operators.cpp.o
 ft_containers: CMakeFiles/ft_containers.dir/unit-tests/stack/test_stack.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/access.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/capacity.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/const_iterator.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/const_reverse_iterator.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/constructors.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/iterator.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/modifiers.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/observers.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/operations.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/reverse_iterator.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/unit-tests/map/test_map.cpp.o
 ft_containers: CMakeFiles/ft_containers.dir/build.make
 ft_containers: CMakeFiles/ft_containers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ft_containers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/levensta/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable ft_containers"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_containers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
