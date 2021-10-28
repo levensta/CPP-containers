@@ -148,7 +148,7 @@ void	modifiers2() {
 		ft_vec.insert(lst_ft.begin(), it_ft);
 		bool	one = test_map<int, std::map<int, int>::iterator, ft::map<int, int>::iterator>(std_vec, ft_vec);
 		print_test_map<int, std::map<int, int>::iterator, ft::map<int, int>::iterator>(std_vec, ft_vec, mode, 1, "./unit-tests/map/insert_range.log");
-			
+
 		std_vec.insert(lst_std.begin(), lst_std.end());
 		ft_vec.insert(lst_ft.begin(), lst_ft.end());
 		bool	two = test_map<int, std::map<int, int>::iterator, ft::map<int, int>::iterator>(std_vec, ft_vec);

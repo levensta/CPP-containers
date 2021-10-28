@@ -106,7 +106,20 @@ namespace ft
 		bool		isRed;
 
 		map_node(type pr, map_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
+		map_node(const map_node &x) : p(x.p), parent(x.parent), left(x.left), right(x.right), end(x.end), isRed(x.isRed) {}
 		virtual ~map_node() {}
+
+		map_node	&operator=(const map_node &x) {
+			if (this != &x) {
+				this->parent = x.parent;
+				this->left = x.left;
+				this->right = x.right;
+				this->end = x.end;
+				this->isRed = x.isRed;
+			}
+			return *this;
+		}
+
 		key &get_key() {
 			return p.first;
 		}
@@ -296,8 +309,19 @@ namespace ft
 		set_node	*end;
 		bool		isRed;
 
-		set_node(type pr) : p(pr), parent(NULL), left(NULL), right(NULL), isRed(true) {}
+		set_node(type pr, set_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
+		set_node(const set_node &x) : p(x.p), parent(x.parent), left(x.left), right(x.right), end(x.end), isRed(x.isRed) {}
 		virtual ~set_node() {}
+		set_node	&operator=(const set_node &x) {
+			if (this != &x) {
+				this->parent = x.parent;
+				this->left = x.left;
+				this->right = x.right;
+				this->end = x.end;
+				this->isRed = x.isRed;
+			}
+			return *this;
+		}
 		key &get_key() {
 			return p;
 		}

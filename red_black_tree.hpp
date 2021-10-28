@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include "nodes.hpp"
+#include "vector.hpp"
 
 namespace ft
 {
@@ -21,10 +22,9 @@ namespace ft
 		~red_black_tree() {}
 
 		static pair<Node *, bool>	insert(Node **root, type type_node, allocator_type &alloc) {
+			Node *new_node = NULL;
 			if (dynamic_cast<EndNode*>(*root) != 0) {
-//				std::cout << "NEW TREE" << std::endl;
-				Node *new_node = create_node(type_node, *root, alloc);
-//				new_node->end = *root;
+				new_node = create_node(type_node, *root, alloc);
 				(*root)->parent = new_node;
 				*root = new_node;
 				(*root)->isRed = false;
@@ -32,84 +32,59 @@ namespace ft
 			}
 			else {
 				Node *tmp = *root;
-
 				while (tmp) {
 					if (type_node == *tmp) {
-//						std::cout << "ELEMENT EXIST" << std::endl;
 						break;
 					}
 					else if (type_node < *tmp) {
 						if (tmp->left == NULL) {
-//							std::cout << "INPUT LEFT" << std::endl;
 							tmp->left = create_node(type_node, (*root)->end, alloc);
+							new_node = tmp->left;
 							change_links(tmp->left, tmp, NULL, NULL);
 							tmp->left->end = (*root)->end;
-							return (ft::make_pair(tmp->left, true));
+							insertion_balance(tmp->left, root);
+							return (ft::make_pair(new_node, true));
 						}
-//						std::cout << "GO LEFT" << std::endl;
 						tmp = tmp->left;
 					}
 					else if (type_node > *tmp) {
 						if (tmp->right == NULL) {
-//							std::cout << "INPUT RIGHT" << std::endl;
 							tmp->right = create_node(type_node, (*root)->end, alloc);
+							new_node = tmp->right;
 							change_links(tmp->right, tmp, NULL, NULL);
 							tmp->right->end = (*root)->end;
-							return (ft::make_pair(tmp->right, true));
+							insertion_balance(tmp->right, root);
+							return (ft::make_pair(new_node, true));
 						}
-//						std::cout << "GO RIGHT" << std::endl;
 						tmp = tmp->right;
 					}
 				}
-				// balance
 				return (ft::make_pair(tmp, false));
 			}
 		}
 
 		static void erase(Node **root, key key_element, allocator_type &alloc) {
 			Node *foundNode = find_key(*root, key_element);
-			if (foundNode) {
-//				std::cout << "NODE EXISTS" << std::endl;
-				Node *replacement = foundNode;
-				Node *save = NULL;
-				if (foundNode->left) {
-//					std::cout << "GO LEFT (FIND MAX NODE)" << std::endl;
-					replacement = max_node(foundNode->left);
-					save = replacement->left;
+			Node *replacement = NULL;
+
+			while (foundNode) {
+				Node	*max = max_node(foundNode->left);
+				Node	*min = min_node(foundNode->right);
+				replacement = foundNode;
+
+				if (max && max->isRed) {
+					replacement = max;
 				}
-				else if (foundNode->right) {
-//					std::cout << "GO RIGHT (FIND MIND NODE)" << std::endl;
-					replacement = min_node(foundNode->right);
-					save = replacement->right;
+				else if (min && min->isRed) {
+					replacement = min;
 				}
-				if (save) {
-					save->parent = replacement->parent;
+				else if (max) {
+					replacement = max;
 				}
-				if (replacement->parent) {
-					if (replacement == replacement->parent->left) {
-//						std::cout << "SAVE RIGHT BRANCH TO LEFT" << std::endl;
-						replacement->parent->left = save;
-					}
-					else if (replacement == replacement->parent->right) {
-//						std::cout << "SAVE LEFT BRANCH TO RIGHT" << std::endl;
-						replacement->parent->right = save;
-					}
+				else if (min) {
+					replacement = min;
 				}
-				change_links(replacement, foundNode->parent, foundNode->left, foundNode->right);
-				if (replacement->left) {
-					replacement->left->parent = replacement;
-				}
-				if (replacement->right) {
-					replacement->right->parent = replacement;
-				}
-				if (replacement->parent) {
-					if (foundNode == replacement->parent->left) {
-						replacement->parent->left = replacement;
-					}
-					else if (foundNode == replacement->parent->right) {
-						replacement->parent->right = replacement;
-					}
-				}
+				swap_nodes(foundNode, replacement);
 				if (*root == foundNode) {
 					*root = replacement;
 					replacement->end->parent = replacement;
@@ -118,8 +93,20 @@ namespace ft
 						(*root)->parent = NULL;
 					}
 				}
+				if (!foundNode->left && !foundNode->right) {
+					break ;
+				}
+			}
+			if (foundNode) {
+				removal_balance(foundNode, root);
+				if (foundNode->parent) {
+					if (is_left_child(foundNode)) {
+						foundNode->parent->left = NULL;
+					} else {
+						foundNode->parent->right = NULL;
+					}
+				}
 				delete_node(foundNode, alloc);
-				// balance
 			}
 		}
 
@@ -179,6 +166,7 @@ namespace ft
 
 		static void	clear(Node **root, allocator_type &alloc) {
 			while (*root && (*root)->end) {
+//				visualisation(*root);
 				erase(root, (*root)->get_key(), alloc);
 			}
 		}
@@ -203,8 +191,55 @@ namespace ft
 			return src;
 		}
 
+
+
+		/*0: left = 1; right = 2; parent = NULL; 1: left = 3; right = NULL; parent = 0;*/
+		/*0: left = 0; right = 2; parent = NULL; 1: left = 3; right = NULL; parent = 1;*/
+		/*0: left = 3; right = NULL; parent = 1; 1: left = 0; right = 2; parent = NULL;*/
 	private:
 		static void balance(Node *root) {}
+
+		static void swap_nodes(Node *lhs, Node *rhs) {
+			if (lhs->left == rhs) {
+				rhs->parent = rhs;
+				lhs->left = lhs;
+			}
+			else if (lhs->right == rhs) {
+				rhs->parent = rhs;
+				lhs->right = lhs;
+			}
+			Node	tmp(*lhs);
+			*lhs = *rhs;
+			*rhs = tmp;
+			if (rhs->parent) {
+				if (rhs->parent->left == lhs) {
+					rhs->parent->left = rhs;
+				}
+				else if (rhs->parent->right == lhs) {
+					rhs->parent->right = rhs;
+				}
+			}
+			if (rhs->left) {
+				rhs->left->parent = rhs;
+			}
+			if (rhs->right) {
+				rhs->right->parent = rhs;
+			}
+			if (lhs->parent) {
+				if (lhs->parent->left == rhs) {
+					lhs->parent->left = lhs;
+				}
+				else if (lhs->parent->right == lhs) {
+					lhs->parent->right = lhs;
+				}
+			}
+			if (lhs->left) {
+				lhs->left->parent = lhs;
+			}
+			if (lhs->right) {
+				lhs->right->parent = lhs;
+			}
+		}
 
 		static Node *create_node(type type_node, Node *end, allocator_type &alloc) {
 			Node *new_node = alloc.allocate(1);
@@ -224,5 +259,177 @@ namespace ft
 			src->parent = new_parent;
 		}
 
+		static bool is_left_child(Node *src) {
+			if (src == src->parent->left) {
+				return true;
+			}
+			return false;
+		}
+
+		static ft::pair<Node *, bool> get_bro(Node *src) {
+			if (src->parent == NULL) {
+				return (ft::make_pair<Node *, bool>(NULL, false));
+			}
+			if (src == src->parent->left) {
+				return (ft::make_pair<Node *, bool>(src->parent->right, true));
+			}
+			return (ft::make_pair<Node *, bool>(src->parent->left, true));
+		}
+
+		static ft::pair<Node *, bool> get_grand(Node *src) {
+			if (src->parent == NULL || src->parent->parent == NULL) {
+				return (ft::make_pair<Node *, bool>(NULL, false));
+			}
+			return (ft::make_pair<Node *, bool>(src->parent->parent, true));
+		}
+
+		static ft::pair<Node *, bool> get_uncle(Node *src) {
+			if (src->parent == NULL) {
+				return (ft::make_pair<Node *, bool>(NULL, false));
+			}
+			return (get_bro(src->parent));
+		}
+
+		// обмен цветами происходит только в том случае, когда у черного родителя – два красных потомка
+		static void swap_colors(Node *src, Node *bro, Node *parent) {
+			src->isRed = false;
+			bro->isRed = false;
+			parent->isRed = true;
+		}
+
+		static void left_rotate(Node *src, Node **root) {
+			if (!src || !src->right)
+				return;
+			Node	*right = src->right;
+
+			if (src->parent) {
+				if (is_left_child(src)) {
+					src->parent->left = right;
+				}
+				else {
+					src->parent->right = right;
+				}
+			}
+			right->parent = src->parent;
+			src->right = right->left;
+			if (src->right) {
+				src->right->parent = src;
+			}
+			right->left = src;
+			src->parent = right;
+			if (*root == src) {
+				(*root)->end->parent = right;
+				*root = right;
+			}
+			bool color = src->isRed;
+			src->isRed = right->isRed;
+			right->isRed = color;
+		}
+
+		static void right_rotate(Node *src, Node **root) {
+			if (!src || !src->left)
+				return;
+			Node	*left = src->left;
+
+			if (src->parent) {
+				if (is_left_child(src)) {
+					src->parent->left = left;
+				}
+				else {
+					src->parent->right = left;
+				}
+			}
+			left->parent = src->parent;
+			src->left = left->right;
+			if (src->left) {
+				src->left->parent = src;
+			}
+			left->right = src;
+			src->parent = left;
+			if (*root == src) {
+				(*root)->end->parent = left;
+				*root = left;
+			}
+			bool color = src->isRed;
+			src->isRed = left->isRed;
+			left->isRed = color;
+		}
+
+		static void insertion_balance(Node *src, Node **root) {
+			if (src->isRed && src->parent && src->parent->isRed) {
+				// когда мы получаем дядю для красного родителя, мы всегда знаем, что его родитель (дед) существует
+				ft::pair<Node *, bool> uncle = get_uncle(src);
+				if (uncle.second) {
+					if (uncle.first && uncle.first->isRed) {
+						swap_colors(src->parent, uncle.first, get_grand(src).first);
+					}
+					else {
+						if (is_left_child(src->parent)) {
+							if (!is_left_child(src)) {
+								left_rotate(src->parent, root);
+								src = src->left;
+							}
+							right_rotate(get_grand(src).first, root);
+						}
+						else {
+							if (is_left_child(src)) {
+								right_rotate(src->parent, root);
+								src = src->right;
+							}
+							left_rotate(get_grand(src).first, root);
+						}
+					}
+					insertion_balance(src->parent, root);
+				}
+			}
+			(*root)->isRed = false;
+		}
+
+		static void removal_balance(Node *src, Node **root) {
+			while (src->parent && !src->isRed) {
+				Node *bro = get_bro(src).first;
+				if (!get_bro(src).second) {
+					break ;
+				}
+				if (bro && !bro->isRed) {
+					if (bro->right && bro->right->isRed) {
+						bro->right->isRed = false;
+						if (is_left_child(src)) {
+							left_rotate(src->parent, root);
+						}
+						else {
+							right_rotate(src->parent, root);
+						}
+						break;
+					}
+					else if (bro->left && bro->left->isRed) {
+						if (is_left_child(src)) {
+							right_rotate(bro, root);
+						}
+						else {
+							left_rotate(bro, root);
+						}
+					}
+					else {
+						bro->isRed = true;
+						if (bro->parent->isRed) {
+							bro->parent->isRed = false;
+							break;
+						}
+						else {
+							src = bro->parent;
+						}
+					}
+				}
+				else {
+					if (is_left_child(src)) {
+						left_rotate(src->parent, root);
+					}
+					else {
+						right_rotate(src->parent, root);
+					}
+				}
+			}
+		}
 	};
 }
