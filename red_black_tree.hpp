@@ -64,7 +64,7 @@ namespace ft
 		}
 
 		static void erase(Node **root, key key_element, allocator_type &alloc) {
-			Node *foundNode = find_key(*root, key_element);
+			Node *foundNode = find_node(*root, key_element);
 			Node *replacement = NULL;
 
 			while (foundNode) {
@@ -110,7 +110,7 @@ namespace ft
 			}
 		}
 
-		static Node *find_key(Node *root, key key_element) {
+		static Node *find_node(Node *root, key key_element) {
 			while (root && key_element != *root) {
 				if (key_element < *root) {
 					root = root->left;
@@ -197,8 +197,6 @@ namespace ft
 		/*0: left = 0; right = 2; parent = NULL; 1: left = 3; right = NULL; parent = 1;*/
 		/*0: left = 3; right = NULL; parent = 1; 1: left = 0; right = 2; parent = NULL;*/
 	private:
-		static void balance(Node *root) {}
-
 		static void swap_nodes(Node *lhs, Node *rhs) {
 			if (lhs->left == rhs) {
 				rhs->parent = rhs;

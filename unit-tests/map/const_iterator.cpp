@@ -134,6 +134,7 @@ void	const_iterator2() {
 		std::ios_base::openmode	mode = std::fstream::in | std::fstream::out | std::fstream::trunc;
 		const std::map<int, int>			std_vec(lst_std.begin(), lst_std.end());
 		const ft::map<int, int>				ft_vec(lst_ft.begin(), lst_ft.end());
+
 		std::list<std::pair<bool, bool> >				std_lst;
 		std::list<ft::pair<bool, bool> >				ft_lst;
 		std::map<int, int>::const_iterator	std_it = std_vec.begin();
@@ -143,6 +144,7 @@ void	const_iterator2() {
 
 		/*Test1*/
 		ft_bool.first = ft_it == ft_vec.begin();
+//		ft_it != ft_map_it;
 		ft_bool.second = ft_bool.first;
 		std_bool.first = std_it == std_vec.begin();
 		std_bool.second = std_bool.first;

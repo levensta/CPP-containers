@@ -5,8 +5,9 @@
 #pragma once
 
 #include "iterator.hpp"
-#include "red_black_tree.hpp"
+//#include "red_black_tree.hpp"
 
+#include "new_tree.hpp"
 namespace ft
 {
 	template <class Node, class EndNode, class Tree = ft::red_black_tree<Node, EndNode> >

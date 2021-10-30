@@ -31,4 +31,5 @@ add_executable(ft_containers main.cpp vector_iterator.hpp iterator.hpp vector.hp
         unit-tests/map/observers.cpp
         unit-tests/map/operations.cpp
         unit-tests/map/reverse_iterator.cpp
-        unit-tests/map/test_map.cpp)
+        unit-tests/map/test_map.cpp
+        new_nodes.hpp new_tree.hpp)

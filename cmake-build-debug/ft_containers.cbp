@@ -92,6 +92,12 @@
 		<Unit filename="/Users/levensta/ft_containers/map.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/new_nodes.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/levensta/ft_containers/new_tree.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/levensta/ft_containers/nodes.hpp">
 			<Option target="ft_containers"/>
 		</Unit>

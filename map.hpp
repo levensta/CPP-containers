@@ -9,8 +9,7 @@
 
 namespace ft
 {
-	template < class Key, class T, class Compare = ft::less<Key>, \
-	class Alloc = std::allocator<pair<const Key,T> > >
+	template < class Key, class T, class Compare = ft::less<Key>, class Alloc = std::allocator<pair<const Key,T> > >
 	class map {
 
 	public:
@@ -21,10 +20,10 @@ namespace ft
 		typedef ft::less<value_type> value_compare;
 		typedef Alloc allocator_type;
 	private:
-		typedef map_node<value_type>	node;
-		typedef map_node<const typename ft::check_const<value_type>::value>	const_node;
-		typedef end_map_node<value_type>	end_node;
-		typedef end_map_node<const typename ft::check_const<value_type>::value>	const_end_node;
+		typedef ft::node<const typename check_const<key_type>::value, mapped_type>	node;
+		typedef const ft::node<const typename check_const<key_type>::value, mapped_type>	const_node;
+		typedef ft::end_node<const typename check_const<key_type>::value, mapped_type>	end_node;
+		typedef const ft::end_node<const typename check_const<key_type>::value, mapped_type>	const_end_node;
 		typedef std::allocator<node>	allocator_type_node;
 		typedef red_black_tree<node, end_node, allocator_type_node>			tree;
 	public:
@@ -150,7 +149,7 @@ namespace ft
 			if (p.second == true) {
 				++_size;
 			}
-			return p.first->p.second;
+			return p.first->get_value();
 		}
 
 		/*
@@ -181,7 +180,7 @@ namespace ft
 		}
 
 		size_type erase (const key_type& k) {
-			if (tree::find_key(_n, k) != NULL) {
+			if (tree::find_node(_n, k).second) {
 				tree::erase(&_n, k, _alloc_node);
 				--_size;
 				return 1;
@@ -225,23 +224,23 @@ namespace ft
 		 *	OPERATIONS
 		 */
 		iterator find (const key_type& k) {
-			node *tmp = tree::find_key(_n, k);
-			if (tmp) {
-				return (iterator(tmp));
+			ft::pair<node *, bool>	tmp = tree::find_node(_n, k);
+			if (tmp.second) {
+				return (iterator(tmp.first));
 			}
 			return this->end();
 		}
 
 		const_iterator find(const key_type& k) const {
-			node *tmp = tree::find_key(_n, k);
-			if (tmp) {
-				return (const_iterator(tmp));
+			ft::pair<node *, bool>	tmp = tree::find_node(_n, k);
+			if (tmp.second) {
+				return (const_iterator(tmp.first));
 			}
 			return this->end();
 		}
 
 		size_type count(const key_type& k) const {
-			return static_cast<size_type>(tree::find_key(_n, k) != NULL);
+			return static_cast<size_type>(tree::find_node(_n, k).second);
 		}
 
 		iterator lower_bound(const key_type& k) {
