@@ -9,11 +9,11 @@
 
 namespace ft
 {
-	template <class Node, class EndNode, class Tree = ft::red_black_tree<Node, EndNode> >
+	template <class Node, class Tree = ft::red_black_tree<Node> >
 	class tree_iterator {
 	private:
 		typedef iterator_traits<typename Node::type *> type_traits;
-		typedef red_black_tree<Node, EndNode>			tree;
+		typedef red_black_tree<Node>			tree;
 
 	public:
 		typedef typename type_traits::value_type value_type;
@@ -29,8 +29,6 @@ namespace ft
 		tree_iterator() : ptrElement(NULL) {}
 
 		tree_iterator(Node *element) : ptrElement(element) {}
-
-		tree_iterator(EndNode *element) : ptrElement(element) {}
 
 		tree_iterator(const tree_iterator &copy) : ptrElement(NULL) {
 			*this = copy;

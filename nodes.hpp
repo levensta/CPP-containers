@@ -88,347 +88,121 @@ namespace ft
 	/*
 	 *	MAP NODE
 	 */
-	template <class T>
-	class map_node {
+	template<class Key, class Value = Key>
+	class node {
+
+	public:
+		typedef ft::pair<Key, Value> 	type;
+		typedef Key						key;
+		typedef Value					value;
+		node							*parent;
+		node							*left;
+		node							*right;
+		node							*end;
 
 	private:
-		map_node() {}
+		bool							_isRed;
+		type							_data;
 
 	public:
-		typedef T type;
-		typedef typename T::first_type key;
-		typedef typename T::second_type value;
-		type		p;
-		map_node	*parent;
-		map_node	*left;
-		map_node	*right;
-		map_node	*end;
-		bool		isRed;
 
-		map_node(type pr, map_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
-		map_node(const map_node &x) : p(x.p), parent(x.parent), left(x.left), right(x.right), end(x.end), isRed(x.isRed) {}
-		virtual ~map_node() {}
+		node() : parent(NULL), left(NULL), right(NULL), end(NULL), _isRed(false) {}
+		node(type pr, node *end) : parent(NULL), left(NULL), right(NULL), end(end), _isRed(true), _data(pr) {}
+		node(const node &x) : parent(x.parent), left(x.left), right(x.right), end(x.end), _isRed(x._isRed), _data(x._data) {}
 
-		map_node	&operator=(const map_node &x) {
+		virtual			~node() {}
+
+		type		&is_data() {
+			return _data;
+		}
+
+		bool			&is_red() {
+			return _isRed;
+		}
+
+		type 			&operator*() {
+			return _data;
+		}
+
+		key		&get_key() {
+			return _data.first;
+		}
+
+		void 			swap(node &x) {
 			if (this != &x) {
-				this->parent = x.parent;
-				this->left = x.left;
-				this->right = x.right;
-				this->end = x.end;
-				this->isRed = x.isRed;
+				node	*tmp = x.left;
+				x.left = this->left;
+				this->left = tmp;
+
+				tmp = x.right;
+				x.right = this->right;
+				this->right = this;
+
+				tmp = x.parent;
+				x.parent = this->parent;
+				this->parent = tmp;
+
+				tmp = x.end;
+				x.end = this->end;
+				this->end = tmp;
+
+				bool 	is = x.is_red();
+				x.is_red() = this->is_red();
+				this->is_red() = is;
 			}
-			return *this;
 		}
 
-		key &get_key() {
-			return p.first;
-		}
-
-		type &operator*() {
-			return p;
-		}
-	};
-
-	template <class T>
-	bool operator==(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first == rhs.p.first;
-	}
-
-	template <class T>
-	bool operator==(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first == rhs.first;
-	}
-
-	template <class T>
-	bool operator==(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first == rhs.p.first;
-	}
-
-	template <class T>
-	bool operator==(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs == rhs.p.first;
-	}
-
-	template <class T>
-	bool operator==(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first == rhs;
-	}
-
-	template <class T>
-	bool operator!=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first != rhs.p.first;
-	}
-
-	template <class T>
-	bool operator!=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first != rhs.first;
-	}
-
-	template <class T>
-	bool operator!=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first != rhs.p.first;
-	}
-
-	template <class T>
-	bool operator!=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs != rhs.p.first;
-	}
-
-	template <class T>
-	bool operator!=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first != rhs;
-	}
-
-	template <class T>
-	bool operator>=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first >= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first >= rhs.first;
-	}
-
-	template <class T>
-	bool operator>=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first >= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs >= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first >= rhs;
-	}
-
-	template <class T>
-	bool operator<=(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first <= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<=(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first <= rhs.first;
-	}
-
-	template <class T>
-	bool operator<=(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first <= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<=(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs <= rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<=(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first <= rhs;
-	}
-
-	template <class T>
-	bool operator>(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first > rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first > rhs.first;
-	}
-
-	template <class T>
-	bool operator>(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first > rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs > rhs.p.first;
-	}
-
-	template <class T>
-	bool operator>(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first > rhs;
-	}
-
-	template <class T>
-	bool operator<(const map_node<T>& lhs, const map_node<T>& rhs) {
-		return lhs.p.first < rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<(const map_node<T>& lhs, const T& rhs) {
-		return lhs.p.first < rhs.first;
-	}
-
-	template <class T>
-	bool operator<(const T& lhs, const map_node<T>& rhs) {
-		return lhs.first < rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<(const typename map_node<T>::key& lhs, const map_node<T>& rhs) {
-		return lhs < rhs.p.first;
-	}
-
-	template <class T>
-	bool operator<(const map_node<T>& lhs, const typename map_node<T>::key& rhs) {
-		return lhs.p.first < rhs;
-	}
-
-	/*
-	 *	END MAP NODE
-	 */
-	template <class T>
-	class end_map_node : public map_node<T> {
-
-	public:
-		end_map_node() : map_node<T>(T(), NULL) {}
-		virtual ~end_map_node() {}
-	};
-
-	/*
-	 *	SET NODE
-	 */
-	template <class T>
-	class set_node {
-
-	private:
-		set_node() {}
-
-	public:
-		typedef T type;
-		typedef T key;
-		type		p;
-		set_node	*parent;
-		set_node	*left;
-		set_node	*right;
-		set_node	*end;
-		bool		isRed;
-
-		set_node(type pr, set_node<T> *end) : p(pr), parent(NULL), left(NULL), right(NULL), end(end), isRed(true) {}
-		set_node(const set_node &x) : p(x.p), parent(x.parent), left(x.left), right(x.right), end(x.end), isRed(x.isRed) {}
-		virtual ~set_node() {}
-		set_node	&operator=(const set_node &x) {
+		void 			left_swap(node &x) {
 			if (this != &x) {
-				this->parent = x.parent;
-				this->left = x.left;
-				this->right = x.right;
-				this->end = x.end;
-				this->isRed = x.isRed;
+				node	*tmp = x.left;
+				x.left = this;
+				this->left = tmp;
+
+				tmp = x.right;
+				x.right = this->right;
+				this->right = this;
+
+//				tmp = x.parent;
+				x.parent = this->parent;
+				this->parent = &x;
+
+				tmp = x.end;
+				x.end = this->end;
+				this->end = tmp;
+
+				bool 	is = x.is_red();
+				x.is_red() = this->is_red();
+				this->is_red() = is;
 			}
-			return *this;
-		}
-		key &get_key() {
-			return p;
 		}
 
-		type &operator*() {
-			return p;
+		void 			right_swap(node &x) {
+			if (this != &x) {
+				node	*tmp = x.left;
+				x.left = this->left;
+				this->left = tmp;
+
+				tmp = x.right;
+				x.right = this;
+				this->right = tmp;
+
+//				tmp = x.parent;
+				x.parent = this->parent;
+				this->parent = &x;
+
+				tmp = x.end;
+				x.end = this->end;
+				this->end = tmp;
+
+				bool 	is = x.is_red();
+				x.is_red() = this->is_red();
+				this->is_red() = is;
+			}
+		}
+
+		bool 	is_end() {
+			return (this->end == NULL);
 		}
 	};
-
-	template <class T>
-	bool operator==(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p == rhs.p;
-	}
-
-	template <class T>
-	bool operator==(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p == rhs;
-	}
-
-	template <class T>
-	bool operator==(const T& lhs, const set_node<T>& rhs) {
-		return lhs == rhs.p;
-	}
-
-	template <class T>
-	bool operator!=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p != rhs.p;
-	}
-
-	template <class T>
-	bool operator!=(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p != rhs;
-	}
-
-	template <class T>
-	bool operator!=(const T& lhs, const set_node<T>& rhs) {
-		return lhs != rhs.p;
-	}
-
-	template <class T>
-	bool operator>=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p >= rhs.p;
-	}
-
-	template <class T>
-	bool operator>=(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p >= rhs;
-	}
-
-	template <class T>
-	bool operator>=(const T& lhs, const set_node<T>& rhs) {
-		return lhs >= rhs.p;
-	}
-
-	template <class T>
-	bool operator<=(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p <= rhs.p;
-	}
-
-	template <class T>
-	bool operator<=(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p <= rhs;
-	}
-
-	template <class T>
-	bool operator<=(const T& lhs, const set_node<T>& rhs) {
-		return lhs <= rhs.p;
-	}
-
-	template <class T>
-	bool operator>(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p > rhs.p;
-	}
-
-	template <class T>
-	bool operator>(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p > rhs;
-	}
-
-	template <class T>
-	bool operator>(const T& lhs, const set_node<T>& rhs) {
-		return lhs > rhs.p;
-	}
-
-	template <class T>
-	bool operator<(const set_node<T>& lhs, const set_node<T>& rhs) {
-		return lhs.p < rhs.p;
-	}
-
-	template <class T>
-	bool operator<(const set_node<T>& lhs, const T& rhs) {
-		return lhs.p < rhs;
-	}
-
-	template <class T>
-	bool operator<(const T& lhs, const set_node<T>& rhs) {
-		return lhs < rhs.p;
-	}
-
-	/*
-	 *	END SET NODE
-	 */
-	template <class T>
-	class end_set_node : public set_node<T> {
-
-	public:
-		end_set_node() : end_set_node<T>(NULL) {}
-		virtual ~end_set_node() {}
-	};
+	
 }

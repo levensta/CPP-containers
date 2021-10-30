@@ -21,19 +21,17 @@ namespace ft
 		typedef ft::less<value_type> value_compare;
 		typedef Alloc allocator_type;
 	private:
-		typedef map_node<value_type>	node;
-		typedef map_node<const typename ft::check_const<value_type>::value>	const_node;
-		typedef end_map_node<value_type>	end_node;
-		typedef end_map_node<const typename ft::check_const<value_type>::value>	const_end_node;
+		typedef ft::node<const typename check_const<key_type>::value, mapped_type>	node;
+		typedef const ft::node<const typename check_const<key_type>::value, mapped_type>	const_node;
 		typedef std::allocator<node>	allocator_type_node;
-		typedef red_black_tree<node, end_node, allocator_type_node>			tree;
+		typedef red_black_tree<node, allocator_type_node>			tree;
 	public:
 		typedef typename allocator_type::reference reference;
 		typedef typename allocator_type::const_reference const_reference;
 		typedef typename allocator_type::pointer pointer;
 		typedef typename allocator_type::const_pointer const_pointer;
-		typedef ft::tree_iterator<node, end_node>	iterator;
-		typedef ft::tree_iterator<node, end_node>	const_iterator;
+		typedef ft::tree_iterator<node>	iterator;
+		typedef ft::tree_iterator<node>	const_iterator;
 		typedef ft::reverse_iterator<const_iterator>	const_reverse_iterator;
 		typedef ft::reverse_iterator<iterator>	reverse_iterator;
 		typedef typename ft::iterator_traits<iterator>::difference_type difference_type;
@@ -41,7 +39,7 @@ namespace ft
 
 	private:
 		node				*_n;
-		end_node			_end;
+		node				_end;
 		size_type			_size;
 		allocator_type		_alloc;
 		allocator_type_node _alloc_node;
@@ -77,9 +75,12 @@ namespace ft
 		// overload assignation
 		map& operator= (const map& x) {
 			if (this != &x) {
+				std::cout << "=" << _size << std::endl;
 				this->clear();
+				std::cout << "Clear" << std::endl;
 				this->_key_comp = x._key_comp;
 				this->insert(x.begin(), x.end());
+				std::cout << "Done" << _size << std::endl;
 			}
 			return *this;
 		}
@@ -145,12 +146,13 @@ namespace ft
 		 *	ELEMENT ACCESS
 		 */
 		mapped_type& operator[] (const key_type& k) {
+			bool ret = true;
 			value_type tmp = ft::make_pair(k, mapped_type());
-			ft::pair<node *, bool>	p = tree::insert(&_n, tmp, _alloc_node);
-			if (p.second == true) {
+			node	*p = tree::insert(&_n, tmp, ret, _alloc_node);
+			if (p && ret) {
 				++_size;
 			}
-			return p.first->p.second;
+			return p->is_data().second;
 		}
 
 		/*
@@ -159,11 +161,15 @@ namespace ft
 
 		// single element
 		ft::pair<iterator, bool> insert (const value_type& val) {
-			ft::pair<node *, bool>	p = tree::insert(&_n, val, _alloc_node);
-			if (p.second == true) {
-				++_size;
+			bool ret = true;
+			node *p = tree::insert(&_n, val, ret, _alloc_node);
+			if (p) {
+				if (ret) {
+					++_size;
+				}
+				return ft::make_pair(iterator(p), ret);
 			}
-			return ft::make_pair(iterator(p.first), p.second);
+			return ft::make_pair(this->end(), false);
 		}
 
 		// with hint
@@ -174,6 +180,7 @@ namespace ft
 		// range
 		template <class InputIterator>
 		void insert (InputIterator first, InputIterator last) {
+			size_t 	n = 0;
 			while (first != last) {
 				this->insert(*first);
 				++first;

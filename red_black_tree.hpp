@@ -10,10 +10,12 @@
 
 namespace ft
 {
-	template<class Node, class EndNode, class Alloc = std::allocator<Node> >
+	template< class Node, class Alloc = std::allocator<Node> >
 	class red_black_tree {
 
 	public:
+//		typedef ft::node<int, int> Node;
+//		typedef std::allocator<Node>	Alloc;
 		typedef typename Node::key key;
 		typedef typename Node::type type;
 		typedef Alloc allocator_type;
@@ -21,49 +23,126 @@ namespace ft
 		red_black_tree() {}
 		~red_black_tree() {}
 
-		static pair<Node *, bool>	insert(Node **root, type type_node, allocator_type &alloc) {
-			Node *new_node = NULL;
-			if (dynamic_cast<EndNode*>(*root) != 0) {
+		static Node		*insert(Node **root, type type_node, bool &t, allocator_type &alloc) {
+			Node *new_node = find_key(*root, type_node.first);
+			if (new_node) {
+				if (new_node->get_key() == type_node.first) {
+					t = false;
+					return new_node;
+				}
+				else if (new_node->get_key() < type_node.first) {
+					new_node->left = create_node(type_node, *root, alloc);
+					new_node->left->parent = new_node;
+					new_node->left->end = (*root)->end;
+					insertion_balance(new_node->left, root);
+					return new_node->left;
+				}
+				else if (new_node->get_key() > type_node.first) {
+					new_node->right = create_node(type_node, *root, alloc);
+					new_node->right->parent = new_node;
+					new_node->right->end = (*root)->end;
+					insertion_balance(new_node->right, root);
+					return new_node->right;
+				}
+			}
+			else {
 				new_node = create_node(type_node, *root, alloc);
 				(*root)->parent = new_node;
 				*root = new_node;
-				(*root)->isRed = false;
-				return (ft::make_pair(*root, true));
+				(*root)->is_red() = false;
 			}
-			else {
-				Node *tmp = *root;
-				while (tmp) {
-					if (type_node == *tmp) {
-						break;
-					}
-					else if (type_node < *tmp) {
-						if (tmp->left == NULL) {
-							tmp->left = create_node(type_node, (*root)->end, alloc);
-							new_node = tmp->left;
-							change_links(tmp->left, tmp, NULL, NULL);
-							tmp->left->end = (*root)->end;
-							insertion_balance(tmp->left, root);
-							return (ft::make_pair(new_node, true));
-						}
-						tmp = tmp->left;
-					}
-					else if (type_node > *tmp) {
-						if (tmp->right == NULL) {
-							tmp->right = create_node(type_node, (*root)->end, alloc);
-							new_node = tmp->right;
-							change_links(tmp->right, tmp, NULL, NULL);
-							tmp->right->end = (*root)->end;
-							insertion_balance(tmp->right, root);
-							return (ft::make_pair(new_node, true));
-						}
-						tmp = tmp->right;
-					}
-				}
-				return (ft::make_pair(tmp, false));
-			}
+			return new_node;
+//			else {
+//				Node *tmp = *root;
+//				while (tmp) {
+//					if (type_node == *tmp) {
+//						break;
+//					}
+//					else if (type_node < *tmp) {
+//						if (tmp->left == NULL) {
+//							tmp->left = create_node(type_node, (*root)->end, alloc);
+//							new_node = tmp->left;
+//							change_links(tmp->left, tmp, NULL, NULL);
+//							tmp->left->end = (*root)->end;
+//							insertion_balance(tmp->left, root);
+//							return (ft::make_pair(new_node, true));
+//						}
+//						tmp = tmp->left;
+//					}
+//					else if (type_node > *tmp) {
+//						if (tmp->right == NULL) {
+//							tmp->right = create_node(type_node, (*root)->end, alloc);
+//							new_node = tmp->right;
+//							change_links(tmp->right, tmp, NULL, NULL);
+//							tmp->right->end = (*root)->end;
+//							insertion_balance(tmp->right, root);
+//							return (ft::make_pair(new_node, true));
+//						}
+//						tmp = tmp->right;
+//					}
+//				}
+//				return new_node;
+//			}
 		}
 
-		static void erase(Node **root, key key_element, allocator_type &alloc) {
+//		static void erase(Node **root, key key_element, allocator_type &alloc) {
+//			Node *foundNode = find_key(*root, key_element);
+//
+//			if (foundNode) {
+//				Node *replacement = foundNode;
+//				Node	*save = NULL;
+//
+//				if (foundNode->left) {
+//					replacement = max_node(foundNode->left);
+//					save = replacement->left;
+//				}
+//				else if (foundNode->right) {
+//					replacement = min_node(foundNode->right);
+//					save = replacement->right;
+//				}
+//				swap_nodes(foundNode, replacement);
+//				if (*root == foundNode) {
+//					*root = replacement;
+//					replacement->end->parent = replacement;
+//					if (foundNode == replacement) {
+//						if (save) {
+//							*root = save;
+//						}
+//						else {
+//							*root = (*root)->end;
+//							(*root)->parent = NULL;
+//						}
+//					}
+//				}
+//				if (!save || !save->is_red()) {
+//					removal_balance(foundNode, root);
+//				}
+//				else {
+//					save->is_red() = false;
+//				}
+//				if (save) {
+//					if (foundNode->parent) {
+//						if (is_left_child(save)) {
+//							foundNode->parent->left = save;
+//						}
+//						else {
+//							foundNode->parent->right = save;
+//						}
+//					}
+//					save->parent = foundNode->parent;
+//				}
+//				if (foundNode->parent) {
+//					if (is_left_child(foundNode)) {
+//						foundNode->parent->left = NULL;
+//					} else {
+//						foundNode->parent->right = NULL;
+//					}
+//				}
+//				delete_node(foundNode, alloc);
+//			}
+//		}
+
+static void erase(Node **root, key key_element, allocator_type &alloc) {
 			Node *foundNode = find_key(*root, key_element);
 			Node *replacement = NULL;
 
@@ -72,10 +151,10 @@ namespace ft
 				Node	*min = min_node(foundNode->right);
 				replacement = foundNode;
 
-				if (max && max->isRed) {
+				if (max && max->is_red()) {
 					replacement = max;
 				}
-				else if (min && min->isRed) {
+				else if (min && min->is_red()) {
 					replacement = min;
 				}
 				else if (max) {
@@ -111,19 +190,41 @@ namespace ft
 		}
 
 		static Node *find_key(Node *root, key key_element) {
-			while (root && key_element != *root) {
-				if (key_element < *root) {
-					root = root->left;
+			if (!root->is_end()) {
+				while (root && root->get_key() != key_element) {
+					if (key_element < root->get_key()) {
+						if (root->left) {
+							root = root->left;
+						}
+						else {
+							break;
+						}
+					}
+					else if (key_element > root->get_key()) {
+						if (root->right) {
+							root = root->right;
+						}
+						else {
+							break ;
+						}
+					}
 				}
-				else if (key_element > *root) {
-					root = root->right;
-				}
+				return root;
 			}
-			return root;
+			return NULL;
+//			while (root && key_element != *root) {
+//				if (key_element < *root) {
+//					root = root->left;
+//				}
+//				else if (key_element > *root) {
+//					root = root->right;
+//				}
+//			}
+//			return root;
 		}
 
 		static Node *next(Node *node_element) {
-			if (dynamic_cast<EndNode *>(node_element) != 0) {
+			if (node_element->is_end()) {
 				node_element = min_node(node_element->parent, true);
 			}
 			else if (node_element == max_node(node_element, true)) {
@@ -144,7 +245,7 @@ namespace ft
 		}
 
 		static Node *prev(Node *node_element) {
-			if (dynamic_cast<EndNode *>(node_element) != 0) {
+			if (node_element->is_end()) {
 				node_element = max_node(node_element->parent, true);
 			}
 			else if (node_element == min_node(node_element, true)) {
@@ -166,7 +267,6 @@ namespace ft
 
 		static void	clear(Node **root, allocator_type &alloc) {
 			while (*root && (*root)->end) {
-//				visualisation(*root);
 				erase(root, (*root)->get_key(), alloc);
 			}
 		}
@@ -201,16 +301,14 @@ namespace ft
 
 		static void swap_nodes(Node *lhs, Node *rhs) {
 			if (lhs->left == rhs) {
-				rhs->parent = rhs;
-				lhs->left = lhs;
+				lhs->left_swap(*rhs);
 			}
 			else if (lhs->right == rhs) {
-				rhs->parent = rhs;
-				lhs->right = lhs;
+				lhs->right_swap(*rhs);
 			}
-			Node	tmp(*lhs);
-			*lhs = *rhs;
-			*rhs = tmp;
+			else {
+				lhs->swap(*rhs);
+			}
 			if (rhs->parent) {
 				if (rhs->parent->left == lhs) {
 					rhs->parent->left = rhs;
@@ -292,9 +390,9 @@ namespace ft
 
 		// обмен цветами происходит только в том случае, когда у черного родителя – два красных потомка
 		static void swap_colors(Node *src, Node *bro, Node *parent) {
-			src->isRed = false;
-			bro->isRed = false;
-			parent->isRed = true;
+			src->is_red() = false;
+			bro->is_red() = false;
+			parent->is_red() = true;
 		}
 
 		static void left_rotate(Node *src, Node **root) {
@@ -321,9 +419,9 @@ namespace ft
 				(*root)->end->parent = right;
 				*root = right;
 			}
-			bool color = src->isRed;
-			src->isRed = right->isRed;
-			right->isRed = color;
+			bool color = src->is_red();
+			src->is_red() = right->is_red();
+			right->is_red() = color;
 		}
 
 		static void right_rotate(Node *src, Node **root) {
@@ -350,17 +448,18 @@ namespace ft
 				(*root)->end->parent = left;
 				*root = left;
 			}
-			bool color = src->isRed;
-			src->isRed = left->isRed;
-			left->isRed = color;
+			bool color = src->is_red();
+			src->is_red() = left->is_red();
+			left->is_red() = color;
 		}
 
 		static void insertion_balance(Node *src, Node **root) {
-			if (src->isRed && src->parent && src->parent->isRed) {
+			ft::pair<Node *, bool> uncle;
+			while (src->is_red() && src->parent && src->parent->is_red()) {
+				uncle = get_uncle(src);
 				// когда мы получаем дядю для красного родителя, мы всегда знаем, что его родитель (дед) существует
-				ft::pair<Node *, bool> uncle = get_uncle(src);
 				if (uncle.second) {
-					if (uncle.first && uncle.first->isRed) {
+					if (uncle.first && uncle.first->is_red()) {
 						swap_colors(src->parent, uncle.first, get_grand(src).first);
 					}
 					else {
@@ -379,21 +478,22 @@ namespace ft
 							left_rotate(get_grand(src).first, root);
 						}
 					}
-					insertion_balance(src->parent, root);
+					src = src->parent;
+//					insertion_balance(src->parent, root);
 				}
 			}
-			(*root)->isRed = false;
+			(*root)->is_red() = false;
 		}
 
 		static void removal_balance(Node *src, Node **root) {
-			while (src->parent && !src->isRed) {
+			while (src->parent && !src->is_red()) {
 				Node *bro = get_bro(src).first;
 				if (!get_bro(src).second) {
 					break ;
 				}
-				if (bro && !bro->isRed) {
-					if (bro->right && bro->right->isRed) {
-						bro->right->isRed = false;
+				if (bro && !bro->is_red()) {
+					if (bro->right && bro->right->is_red()) {
+						bro->right->is_red() = false;
 						if (is_left_child(src)) {
 							left_rotate(src->parent, root);
 						}
@@ -402,7 +502,7 @@ namespace ft
 						}
 						break;
 					}
-					else if (bro->left && bro->left->isRed) {
+					else if (bro->left && bro->left->is_red()) {
 						if (is_left_child(src)) {
 							right_rotate(bro, root);
 						}
@@ -411,9 +511,9 @@ namespace ft
 						}
 					}
 					else {
-						bro->isRed = true;
-						if (bro->parent->isRed) {
-							bro->parent->isRed = false;
+						bro->is_red() = true;
+						if (bro->parent->is_red()) {
+							bro->parent->is_red() = false;
 							break;
 						}
 						else {
@@ -431,5 +531,55 @@ namespace ft
 				}
 			}
 		}
+
+//		static void removal_balance(Node *src, Node **root) {
+//			while (src->parent && !src->is_red()) {
+//				Node *bro = get_bro(src).first;
+//				if (!get_bro(src).second) {
+//					break ;
+//				}
+//				if (bro && !bro->is_red()) {
+//					if (bro->right && bro->right->is_red()) {
+//						bro->right->is_red() = false;
+//						if (is_left_child(src)) {
+//							left_rotate(src->parent, root);
+//						}
+//						else {
+//							right_rotate(src->parent, root);
+//						}
+//						break;
+//					}
+//					else if (bro->left && bro->left->is_red()) {
+//						if (is_left_child(src)) {
+//							right_rotate(bro, root);
+//						}
+//						else {
+//							left_rotate(bro, root);
+//						}
+//					}
+//					else {
+//						bro->is_red() = true;
+//						if (bro->parent->is_red()) {
+//							bro->parent->is_red() = false;
+//							break;
+//						}
+//						else {
+//							src = bro->parent;
+//						}
+//					}
+//				}
+//				else if (bro) {
+//					if (is_left_child(src)) {
+//						left_rotate(src->parent, root);
+//					}
+//					else {
+//						right_rotate(src->parent, root);
+//					}
+//				}
+//				else {
+//					break ;
+//				}
+//			}
+//		}
 	};
 }
